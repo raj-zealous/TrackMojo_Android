@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:id="@+id/fragment_settings_tvLogout"
+        android:padding="@dimen/tendp"
+        android:textSize="@dimen/font_medium"
+         />-->
+
+    <RelativeLayout
+        android:id="@+id/fragment_settings_relNotificationsAndPrompts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/tendp">
+
+        <TextView
+            android:id="@+id/activity_help_tvWhatIs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/row_comment_list_tvTime"
+            android:layout_toStartOf="@+id/row_comment_list_tvTime"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/settings_tab_notification_and_prompts"
+            android:textColor="@color/regular_text"
+            android:textSize="@dimen/font_medium" />
+
+        <TextView
+            android:id="@+id/activity_help_tvSoTellMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/activity_help_tvWhatIs"
+            android:text="@string/settings_tab_control_when"
+            android:textColor="@color/list_group_name"
+            android:textSize="@dimen/font_small" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/tendp"
+            android:src="@drawable/ic_home_list_expand" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/twodp"
+        android:background="@color/edit_box_back" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_settings_relAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/tendp">
+
+        <TextView
+            android:id="@+id/activity_help_tvWhy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/row_comment_list_tvTime"
+            android:layout_toStartOf="@+id/row_comment_list_tvTime"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/settings_tab_account"
+            android:textColor="@color/regular_text"
+            android:textSize="@dimen/font_medium" />
+
+        <TextView
+            android:id="@+id/activity_help_tvHowWill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/activity_help_tvWhy"
+            android:text="@string/settings_tab_review_or_update"
+            android:textColor="@color/list_group_name"
+            android:textSize="@dimen/font_small" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/tendp"
+            android:src="@drawable/ic_home_list_expand" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/twodp"
+        android:background="@color/edit_box_back" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_settings_relService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:padding="@dimen/tendp">
+
+        <TextView
+            android:id="@+id/activity_help_tvHow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/row_comment_list_tvTime"
+            android:layout_toStartOf="@+id/row_comment_list_tvTime"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/settings_tab_services"
+            android:textColor="@color/regular_text"
+            android:textSize="@dimen/font_medium" />
+
+        <TextView
+            android:id="@+id/activity_help_tvHowDoIt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/activity_help_tvHow"
+            android:text="@string/settings_tab_update_which"
+            android:textColor="@color/list_group_name"
+            android:textSize="@dimen/font_small" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/tendp"
+            android:src="@drawable/ic_home_list_expand" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/twodp"
+        android:visibility="gone"
+        android:background="@color/edit_box_back" />
+</LinearLayout>

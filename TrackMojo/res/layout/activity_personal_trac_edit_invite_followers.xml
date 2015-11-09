@@ -1,0 +1,171 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.tracmojo.ui.PersonalTracSetFrequencyActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/activity_add_personal_trac_relFooter"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="@dimen/sixtydp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_home_list_header"
+                android:gravity="center_vertical"
+                android:padding="@dimen/tendp"
+                android:text="@string/activity_invite_followers_add_or_change_participants_of_trac"
+                android:textColor="@color/blue_button_default_color"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:id="@+id/activity_personal_trac_edit_invite_followers_tvGroupName"
+                style="@style/text_view_blue_style_with_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="group name"
+                android:textColor="@color/regular_text"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/activity_personal_trac_edit_invite_followers_etTracName"
+                style="@style/edit_text_style_with_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twodp"
+                android:layout_marginTop="@dimen/tendp"
+                android:background="@color/edit_box_back" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_home_list_header"
+                android:gravity="center_vertical"
+                android:padding="@dimen/tendp"
+                android:text="@string/activity_invite_followers_participants_invited"
+                android:textColor="@color/blue_button_default_color"
+                android:textSize="@dimen/font_small" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/onefifty">
+
+                <ListView
+                    android:id="@+id/activity_personal_trac_edit_invite_followers_lvFollowersList"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/onefifty" />
+
+                <TextView
+                    android:id="@+id/activity_personal_trac_edit_invite_followers_tvNoFollowerFound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/activity_invite_followers_invite_no_follower_found"
+                    android:textColor="@color/list_text"
+                    android:textSize="@dimen/font_medium"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twodp"
+                android:background="@color/edit_box_back" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_home_list_header"
+                android:gravity="center_vertical"
+                android:padding="@dimen/tendp"
+                android:text="@string/activity_invite_followers_invite_more_participants"
+                android:textColor="@color/blue_button_default_color"
+                android:textSize="@dimen/font_small" />
+
+            <RelativeLayout
+                android:id="@+id/activity_personal_trac_edit_invite_followers_relInviteViaEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/tendp">
+
+                <TextView
+                    android:id="@+id/activity_personal_trac_edit_invite_followers_tvInviteViaMail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/activity_invite_followers_invite_via_email"
+                    android:textColor="@color/list_text"
+                    android:textSize="@dimen/font_small" />
+
+                <TextView
+                    android:id="@+id/activity_personal_trac_edit_invite_followers_tvSelectFromContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/activity_personal_trac_edit_invite_followers_tvInviteViaMail"
+                    android:text="@string/activity_invite_followers_select_from_your_contact_list"
+                    android:textSize="@dimen/font_small" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_home_list_expand" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twodp"
+                android:background="@color/edit_box_back" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/activity_set_frequency_relFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/edit_box_back"
+        android:padding="@dimen/tendp">
+
+        <TextView
+            android:id="@+id/activity_personal_trac_edit_invite_followers_tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/activity_add_personal_trac_back"
+            android:textColor="@color/blue_button_default_color"
+            android:textSize="@dimen/font_medium" />
+
+        <TextView
+            android:id="@+id/activity_personal_trac_edit_invite_followers_tvDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/activity_invite_followers_done"
+            android:textColor="@color/blue_button_default_color"
+            android:textSize="@dimen/font_medium" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

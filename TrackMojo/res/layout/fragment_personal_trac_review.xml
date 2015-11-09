@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/thirtyfive_dp" >
+
+    <LinearLayout
+        android:id="@+id/fragment_trac_review_relCaptureGraph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.tracmojo.customwidget.CustomTextView
+            android:id="@+id/fragment_trac_review_tvTracName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/tendp"
+            android:layout_marginRight="@dimen/tendp"
+            android:layout_marginTop="@dimen/tendp"
+            android:background="@drawable/edit_box_background_solid"
+            android:gravity="center"
+            android:padding="@dimen/tendp"
+            android:textColor="@color/regular_text"
+            android:textSize="@dimen/font_small" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tendp"
+            android:background="@color/trac_review_graph_type"
+            android:visibility="gone" >
+
+            <com.tracmojo.customwidget.CustomTextView
+                android:id="@+id/fragment_trac_review_tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/tendp"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_small" />
+
+            <com.tracmojo.customwidget.CustomTextView
+                android:id="@+id/fragment_trac_review_tvFrequency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/tendp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_small" />
+
+            <ImageView
+                android:id="@+id/fragment_trac_review_ivCalender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/tendp"
+                android:src="@drawable/ic_calender" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_trac_review_relGraph"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/oneeighty"
+            android:background="@drawable/ic_trac_review_graph_back"
+            android:visibility="gone" >
+        </RelativeLayout>
+
+        <!--
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twofifty"
+                android:layout_marginTop="@dimen/tendp">
+
+                <RelativeLayout
+                    android:id="@+id/chartbackGround"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/twohundred"
+                    android:background="@drawable/ic_trac_review_graph_back">
+
+                </RelativeLayout>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_210sdp"/>
+            </RelativeLayout>
+        -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twofifty"
+            android:layout_marginTop="@dimen/_10sdp" >
+
+            <RelativeLayout
+                android:id="@+id/chartbackGround"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twohundred"
+                android:background="@drawable/ic_trac_review_graph_back" >
+            </RelativeLayout>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_210sdp"
+                android:layout_marginBottom="@dimen/_5sdp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:gravity="right"
+        android:paddingRight="@dimen/tendp"
+        android:text="www.tracmojo.com"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tendp"
+        android:paddingLeft="@dimen/tendp"
+        android:paddingRight="@dimen/tendp" >
+
+        <com.tracmojo.customwidget.CustomTextView
+            android:id="@+id/fragment_trac_review_tvPersonalTrac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/fragment_trac_review_personal_trac"
+            android:textColor="@color/regular_text"
+            android:textSize="@dimen/font_small" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <com.tracmojo.customwidget.CustomTextView
+                android:id="@+id/fragment_trac_review_tvPersonalFollowers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_trac_review_personal_trac"
+                android:textColor="@color/list_group_name"
+                android:textSize="@dimen/font_micro" />
+
+            <ImageView
+                android:id="@+id/fragment_trac_review_tvAddFollowers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/tendp"
+                android:src="@drawable/ic_add_follower" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.tracmojo.customwidget.CustomTextView
+        android:id="@+id/fragment_trac_review_tvOwnerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/fragment_trac_review_tvPersonalTrac"
+        android:layout_marginLeft="@dimen/tendp"
+        android:text="Owner : Me"
+        android:textColor="@color/list_group_name"
+        android:textSize="@dimen/font_micro" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/twodp"
+        android:layout_marginTop="@dimen/tendp"
+        android:background="@color/edit_box_back" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/tendp" >
+
+        <com.tracmojo.customwidget.CustomTextView
+            android:id="@+id/fragment_trac_review_tvStartedLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/fragment_trac_review_started"
+            android:textColor="@color/regular_text"
+            android:textSize="@dimen/font_small" />
+
+        <com.tracmojo.customwidget.CustomTextView
+            android:id="@+id/fragment_trac_review_tvStartedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fragment_trac_review_tvStartedLabel"
+            android:text=""
+            android:textColor="@color/list_group_name"
+            android:textSize="@dimen/font_micro" />
+
+        <com.tracmojo.customwidget.CustomTextView
+            android:id="@+id/fragment_trac_review_tvFinishLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/fragment_trac_review_finish"
+            android:textColor="@color/regular_text"
+            android:textSize="@dimen/font_small" />
+
+        <com.tracmojo.customwidget.CustomTextView
+            android:id="@+id/fragment_trac_review_tvFinishDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/fragment_trac_review_tvFinishLabel"
+            android:text=""
+            android:textColor="@color/list_group_name"
+            android:textSize="@dimen/font_micro" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/twodp"
+        android:background="@color/edit_box_back" />
+
+    <LinearLayout
+        android:id="@+id/fragment_trac_review_linTracToDateLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tendp"
+            android:visibility="gone" >
+
+            <com.tracmojo.customwidget.CustomTextView
+                android:id="@+id/fragment_trac_review_tvTracToDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/fragment_trac_review_trac_to_date"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_small" />
+
+            <com.tracmojo.customwidget.CustomTextView
+                android:id="@+id/fragment_trac_review_tvTracToDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fragment_trac_review_tvTracToDateLabel"
+                android:text=""
+                android:textColor="@color/list_group_name"
+                android:textSize="@dimen/font_micro" />
+
+            <com.tracmojo.customwidget.CustomTextView
+                android:id="@+id/fragment_trac_review_tvNextLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/fragment_trac_review_next"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_small" />
+
+            <com.tracmojo.customwidget.CustomTextView
+                android:id="@+id/fragment_trac_review_tvNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/fragment_trac_review_tvNextLabel"
+                android:textColor="@color/blue_button_default_color"
+                android:textSize="@dimen/font_micro" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twodp"
+            android:background="@color/edit_box_back"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.tracmojo.customwidget.CustomTextView
+            android:id="@+id/fragment_trac_review_tvCommunicationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/tendp"
+            android:text="@string/fragment_trac_review_communicate_with_followers"
+            android:textColor="@color/list_group_name"
+            android:textSize="@dimen/font_micro"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/fragment_trac_review_ivMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/tendp"
+            android:paddingLeft="@dimen/fivedp"
+            android:paddingRight="@dimen/tendp"
+            android:paddingTop="@dimen/tendp"
+            android:src="@drawable/ic_trac_review_message" />
+
+        <ImageView
+            android:id="@+id/fragment_trac_review_ivComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/fragment_trac_review_ivMessage"
+            android:paddingBottom="@dimen/tendp"
+            android:paddingLeft="@dimen/fivedp"
+            android:paddingRight="@dimen/fivedp"
+            android:paddingTop="@dimen/tendp"
+            android:src="@drawable/ic_notificatoin" />
+
+        <ImageView
+            android:id="@+id/fragment_trac_review_ivCallOrText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/fragment_trac_review_ivComment"
+            android:paddingBottom="@dimen/tendp"
+            android:paddingLeft="@dimen/tendp"
+            android:paddingRight="@dimen/fivedp"
+            android:paddingTop="@dimen/tendp"
+            android:src="@drawable/ic_call_text"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/twodp"
+        android:background="@color/edit_box_back" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_trac_review_relShare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.tracmojo.customwidget.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/tendp"
+            android:text="@string/fragment_trac_review_share_this_trac"
+            android:textColor="@color/list_group_name"
+            android:textSize="@dimen/font_micro"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/fragment_trac_review_ivShareMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/tendp"
+            android:paddingLeft="@dimen/fivedp"
+            android:paddingRight="@dimen/tendp"
+            android:paddingTop="@dimen/tendp"
+            android:src="@drawable/ic_trac_review_share_message" />
+
+        <ImageView
+            android:id="@+id/fragment_trac_review_ivShareTwitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/fragment_trac_review_ivShareMessage"
+            android:paddingBottom="@dimen/tendp"
+            android:paddingLeft="@dimen/fivedp"
+            android:paddingRight="@dimen/fivedp"
+            android:paddingTop="@dimen/tendp"
+            android:src="@drawable/ic_trac_review_twitter" />
+
+        <ImageView
+            android:id="@+id/fragment_trac_review_ivShareFaceBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/fragment_trac_review_ivShareTwitter"
+            android:paddingBottom="@dimen/tendp"
+            android:paddingLeft="@dimen/tendp"
+            android:paddingRight="@dimen/fivedp"
+            android:paddingTop="@dimen/tendp"
+            android:src="@drawable/ic_trac_review_facebook" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/onedp"
+        android:background="@color/home_header_line" />
+
+    <RelativeLayout
+        android:id="@+id/activity_add_personal_trac_relFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/edit_box_back"
+        android:visibility="visible" >
+
+        <com.tracmojo.customwidget.CustomTextView
+            android:id="@+id/fragment_trac_review_tvViewComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="@dimen/tendp"
+            android:paddingTop="@dimen/eighteen"
+            android:text="@string/fragment_trac_review_view_comments"
+            android:textColor="@color/blue_button_default_color"
+            android:textSize="@dimen/font_medium" />
+
+        <RelativeLayout
+            android:id="@+id/fragment_trac_review_relNotificationCount"
+            android:layout_width="@dimen/thritysp"
+            android:layout_height="@dimen/thritysp"
+            android:layout_toRightOf="@+id/fragment_trac_review_tvViewComments"
+            android:background="@drawable/home_gray_circular_background"
+            android:visibility="visible" >
+
+            <com.tracmojo.customwidget.CustomTextView
+                android:id="@+id/fragment_trac_review_tvNotificationCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/twelve"
+                app:fontName="Roboto-Regular.ttf" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/onedp"
+        android:background="@color/home_header_line"
+        android:visibility="visible" />
+
+</LinearLayout>

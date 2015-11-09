@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/tendp"
+    android:weightSum="6" >
+    
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5.2"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/list_row_single_item_selection_tvQuatntity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fivedp"
+            android:layout_marginTop="@dimen/threedp"
+            android:gravity="left"
+            android:textColor="@color/regular_text"
+            android:textSize="@dimen/font_small" />
+    </LinearLayout>
+    
+    <ImageView
+        android:id="@+id/list_row_single_item_selection_iv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight=".8"
+        android:src="@drawable/ic_radio_uncheck" />
+
+</LinearLayout>

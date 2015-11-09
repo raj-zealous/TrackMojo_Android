@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dialog_width"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:clickable="true"
+    android:background="@color/add_trac_dialog_tranceparncy"
+    android:paddingBottom="@dimen/twenty"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:id="@+id/custom_add_trac_dialog_relAddPersonalTrac"
+            android:layout_width="@dimen/eighty_dp"
+            android:layout_height="@dimen/eighty_dp"
+            android:background="@drawable/add_trac_dialog_circular_background">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/tendp"
+                android:src="@drawable/ic_home_add_personal_trac"
+                 />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tendp"
+            android:text="@string/activity_dashboard_home_add_personal_trac"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_small" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:id="@+id/custom_add_trac_dialog_relAddGroupTrac"
+            android:layout_width="@dimen/eighty_dp"
+            android:layout_height="@dimen/eighty_dp"
+            android:background="@drawable/add_trac_dialog_circular_background">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/tendp"
+                android:src="@drawable/ic_home_add_group_trac" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tendp"
+            android:text="@string/activity_dashboard_home_add_group_trac"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_small" />
+
+    </LinearLayout>
+
+</LinearLayout>

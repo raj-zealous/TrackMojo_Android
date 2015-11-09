@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ListView
+        android:id="@+id/fragment_comment_list_lvCommentList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fragment_comment_list_linFooter"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:id="@+id/fragment_comment_list_linFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/onedp"
+            android:background="@color/home_header_line" />
+        <TextView
+            android:id="@+id/fragment_comment_list_tvAddComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tendp"
+            android:orientation="vertical"
+            android:text="@string/fragment_trac_review_add_comments"
+            android:textColor="@color/blue_button_default_color"
+            android:textSize="@dimen/font_medium"
+            android:gravity="center"
+            android:background="@color/edit_box_back"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/onedp"
+            android:background="@color/home_header_line" />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

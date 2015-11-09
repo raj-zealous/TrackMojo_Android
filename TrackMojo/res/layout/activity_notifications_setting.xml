@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_home_list_header"
+            android:gravity="center_vertical"
+            android:padding="@dimen/tendp"
+            android:text="@string/notification_settings_preferred_time_of_day"
+            android:textColor="@color/blue_button_default_color"
+            android:textSize="@dimen/font_small" />
+
+        <TextView
+            android:id="@+id/activity_notification_settings_tvPreferredTime"
+            style="@style/edit_text_style_with_margins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_drop_down"
+            android:textColor="@color/regular_text" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twodp"
+            android:layout_marginTop="@dimen/tendp"
+            android:background="@color/edit_box_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_home_list_header"
+            android:gravity="center_vertical"
+            android:padding="@dimen/tendp"
+            android:text="@string/notification_settings_participating_trac_notifications"
+            android:textColor="@color/blue_button_default_color"
+            android:textSize="@dimen/font_small" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tendp">
+
+            <TextView
+                android:id="@+id/activity_notification_settings_tvTimeToTracMojo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/activity_notification_settings_tbItsTimeToTracMojo"
+                android:text="@string/notification_settings_its_time_to_tracmojo"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/activity_notification_settings_tvTimeToTracMojo"
+                android:layout_toLeftOf="@+id/activity_notification_settings_tbItsTimeToTracMojo"
+                android:textColor="@color/list_group_name"
+                android:textSize="@dimen/font_micro" />
+
+            <ToggleButton
+                android:id="@+id/activity_notification_settings_tbItsTimeToTracMojo"
+                android:layout_width="@dimen/fourtydp"
+                android:layout_height="@dimen/twentyfivedp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/custom_toggle"
+                android:textOff=""
+                android:textOn="" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twodp"
+            android:background="@color/edit_box_back" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tendp">
+
+            <TextView
+                android:id="@+id/activity_notification_settings_tvRemindToTracMojo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/activity_notification_settings_tbItsRemindToTracMojo"
+                android:text="@string/notification_settings_a_reminder_to_tracmojo"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/activity_notification_settings_tvRemindToTracMojo"
+                android:layout_toLeftOf="@+id/activity_notification_settings_tbItsRemindToTracMojo"
+                android:textColor="@color/list_group_name"
+                android:textSize="@dimen/font_micro" />
+
+            <ToggleButton
+                android:id="@+id/activity_notification_settings_tbItsRemindToTracMojo"
+                android:layout_width="@dimen/fourtydp"
+                android:layout_height="@dimen/twentyfivedp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/custom_toggle"
+                android:textOff=""
+                android:textOn="" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twodp"
+            android:background="@color/edit_box_back" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tendp">
+
+            <TextView
+                android:id="@+id/activity_notification_settings_tvLastChanceToTracMojo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/activity_notification_settings_tbLastChanceToTracMojo"
+                android:text="@string/notification_settings_last_chance_to_tracmojo"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/activity_notification_settings_tvLastChanceToTracMojo"
+                android:layout_toLeftOf="@+id/activity_notification_settings_tbLastChanceToTracMojo"
+
+                android:textColor="@color/list_group_name"
+                android:textSize="@dimen/font_micro" />
+
+            <ToggleButton
+                android:id="@+id/activity_notification_settings_tbLastChanceToTracMojo"
+                android:layout_width="@dimen/fourtydp"
+                android:layout_height="@dimen/twentyfivedp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/custom_toggle"
+                android:textOff=""
+                android:textOn="" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twodp"
+            android:background="@color/edit_box_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_home_list_header"
+            android:gravity="center_vertical"
+            android:padding="@dimen/tendp"
+            android:text="@string/notification_settings_following_trac_notification"
+            android:textColor="@color/blue_button_default_color"
+            android:textSize="@dimen/font_small" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tendp">
+
+            <TextView
+                android:id="@+id/activity_notification_settings_tvEveryTimeFollowedTracIsCompleted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/activity_notification_settings_tbEveryTimeFollowedTracIsCompleted"
+                android:text="@string/notification_settings_every_time_a_followed_trac_rate_is_completed"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/activity_notification_settings_tvEveryTimeFollowedTracIsCompleted"
+                android:layout_toLeftOf="@+id/activity_notification_settings_tbEveryTimeFollowedTracIsCompleted"
+
+                android:textColor="@color/list_group_name"
+                android:textSize="@dimen/font_micro" />
+
+            <ToggleButton
+                android:id="@+id/activity_notification_settings_tbEveryTimeFollowedTracIsCompleted"
+                android:layout_width="@dimen/fourtydp"
+                android:layout_height="@dimen/twentyfivedp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/custom_toggle"
+                android:textOff=""
+                android:textOn="" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twodp"
+            android:background="@color/edit_box_back" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tendp">
+
+            <TextView
+                android:id="@+id/activity_notification_settings_tvWeeklyReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/activity_notification_settings_tbWeeklyReminder"
+                android:text="@string/notification_settings_a_weekly_reminder_to_review_followed_tracs"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/activity_notification_settings_tvWeeklyReminder"
+                android:layout_toLeftOf="@+id/activity_notification_settings_tbWeeklyReminder"
+
+                android:textColor="@color/list_group_name"
+                android:textSize="@dimen/font_micro" />
+
+            <ToggleButton
+                android:id="@+id/activity_notification_settings_tbWeeklyReminder"
+                android:layout_width="@dimen/fourtydp"
+                android:layout_height="@dimen/twentyfivedp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/custom_toggle"
+                android:textOff=""
+                android:textOn="" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twodp"
+            android:background="@color/edit_box_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_home_list_header"
+            android:gravity="center_vertical"
+            android:padding="@dimen/tendp"
+            android:text="@string/notification_settings_trac_owner_management_notifications"
+            android:textColor="@color/blue_button_default_color"
+            android:textSize="@dimen/font_small" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tendp">
+
+            <TextView
+                android:id="@+id/activity_notification_settings_tvEveryTimeParticipantsJoinsOrLeaves"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/activity_notification_settings_tbEveryTimeParticipantsJoinsOrLeaves"
+                android:text="@string/notification_settings_every_time_a_participant_joins_or_leaves"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/activity_notification_settings_tvEveryTimeParticipantsJoinsOrLeaves"
+                android:layout_toLeftOf="@+id/activity_notification_settings_tbEveryTimeParticipantsJoinsOrLeaves"
+
+                android:textColor="@color/list_group_name"
+                android:textSize="@dimen/font_micro" />
+
+            <ToggleButton
+                android:id="@+id/activity_notification_settings_tbEveryTimeParticipantsJoinsOrLeaves"
+                android:layout_width="@dimen/fourtydp"
+                android:layout_height="@dimen/twentyfivedp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/custom_toggle"
+                android:textOff=""
+                android:textOn="" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twodp"
+            android:background="@color/edit_box_back" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tendp">
+
+            <TextView
+                android:id="@+id/activity_notification_settings_tvEveryTimeFollowersJoinsOrLeaves"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="@dimen/fivedp"
+                android:layout_toLeftOf="@+id/activity_notification_settings_tbEveryTimeFollowersJoinsOrLeaves"
+                android:text="@string/notification_settings_every_time_a_followers_joins_or_leaves"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/activity_notification_settings_tvEveryTimeFollowersJoinsOrLeaves"
+                android:layout_toLeftOf="@+id/activity_notification_settings_tbEveryTimeFollowersJoinsOrLeaves"
+
+                android:textColor="@color/list_group_name"
+                android:textSize="@dimen/font_micro" />
+
+            <ToggleButton
+                android:id="@+id/activity_notification_settings_tbEveryTimeFollowersJoinsOrLeaves"
+                android:layout_width="@dimen/fourtydp"
+                android:layout_height="@dimen/twentyfivedp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/custom_toggle"
+                android:textOff=""
+                android:textOn="" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twodp"
+            android:background="@color/edit_box_back" />
+    </LinearLayout>
+</ScrollView>
+

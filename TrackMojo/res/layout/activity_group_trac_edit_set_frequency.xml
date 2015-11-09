@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.tracmojo.ui.PersonalTracSetFrequencyActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingBottom="@dimen/sixtydp"
+        android:layout_above="@+id/activity_add_personal_trac_relFooter"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_home_list_header"
+                android:gravity="center_vertical"
+                android:padding="@dimen/tendp"
+                android:text="@string/activity_set_frequency_of_tracs_for"
+                android:textColor="@color/blue_button_default_color"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:id="@+id/activity_group_trac_edit_set_frequency_tvGroupName"
+                style="@style/text_view_blue_style_with_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="group name"
+                android:textColor="@color/regular_text" />
+
+            <EditText
+                android:id="@+id/activity_group_trac_edit_set_frequency_etTracName"
+                style="@style/edit_text_style_with_margins"
+                android:inputType="textNoSuggestions|textMultiLine"
+                android:maxLines="5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twodp"
+                android:layout_marginTop="@dimen/tendp"
+                android:background="@color/edit_box_back" />
+
+            <TextView
+                style="@style/text_view_blue_style_with_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_set_frequncy_as" />
+
+            <TextView
+                android:id="@+id/activity_group_trac_edit_set_frequency_tvParentFrequency"
+                style="@style/edit_text_style_with_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_drop_down" />
+
+            <TextView
+                android:id="@+id/activity_group_trac_edit_set_frequency_tvChildFrequencyLabel"
+                style="@style/text_view_blue_style_with_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_set_frequncy_on" />
+
+            <TextView
+                android:id="@+id/activity_group_trac_edit_set_frequency_tvChildFrequency"
+                style="@style/edit_text_style_with_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_drop_down" />
+
+            <TextView
+                style="@style/text_view_blue_style_with_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_set_frequncy_finishing_on" />
+
+            <TextView
+                android:id="@+id/activity_group_trac_edit_set_frequency_tvFinishingDate"
+                style="@style/edit_text_style_with_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_set_frequncy_finish_date"
+                 />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/activity_set_frequency_relFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/edit_box_back"
+        android:padding="@dimen/tendp">
+
+        <TextView
+            android:id="@+id/activity_group_trac_edit_set_frequency_tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/activity_add_personal_trac_back"
+            android:textColor="@color/blue_button_default_color"
+            android:textSize="@dimen/font_medium" />
+
+        <TextView
+            android:id="@+id/activity_group_trac_edit_set_frequency_tvNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/activity_add_personal_trac_next"
+            android:textColor="@color/blue_button_default_color"
+            android:textSize="@dimen/font_medium" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

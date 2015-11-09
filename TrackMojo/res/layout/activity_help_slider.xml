@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#029cda"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.tracmojo.widget.NestingViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <com.tracmojo.widget.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="100dp"
+            android:layout_height="26dp"
+            android:layout_above="@+id/buttonGotIt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:paddingTop="10dp"
+            app:fillColor="#F7FE2E"
+            app:pageColor="#D1CA44"
+            app:radius="4dp"
+            app:strokeColor="#D1CA44"
+            app:strokeWidth="0dp" />
+
+        <Button
+            android:id="@+id/buttonGotIt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/button_bg"
+            android:text="Ok, got it!"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/thirtyfive_dp" >
+
+        <com.tracmojo.customwidget.CustomEditText
+            app:fontNameForEditText="Roboto-Regular.ttf"
+            android:id="@+id/activity_registration_etFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginRight="@dimen/twenty"
+            android:layout_marginTop="@dimen/twenty"
+            android:drawablePadding="@dimen/tendp"
+            android:background="@drawable/edit_box_background_solid"
+            android:hint="@string/activity_registration_user_name"
+            android:inputType="textNoSuggestions|textCapSentences|textCapWords"
+            android:padding="@dimen/tendp"
+            android:maxLength="60"
+            android:singleLine="true"
+            android:textSize="@dimen/font_small" />
+        
+        <com.tracmojo.customwidget.CustomEditText
+            app:fontNameForEditText="Roboto-Regular.ttf"
+            android:id="@+id/activity_registration_etLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginRight="@dimen/twenty"
+            android:layout_marginTop="@dimen/tendp"
+            android:drawablePadding="@dimen/tendp"
+            android:background="@drawable/edit_box_background_solid"
+            android:hint="@string/activity_registration_last_name"
+            android:inputType="textNoSuggestions|textCapSentences|textCapWords"
+            android:padding="@dimen/tendp"
+            android:maxLength="60"
+            android:singleLine="true"
+            android:textSize="@dimen/font_small" />
+
+        <com.tracmojo.customwidget.CustomEditText
+            app:fontNameForEditText="Roboto-Regular.ttf"
+            android:id="@+id/activity_registration_etEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginRight="@dimen/twenty"
+            android:layout_marginTop="@dimen/tendp"
+            android:drawablePadding="@dimen/tendp"
+            android:background="@drawable/edit_box_background_solid"
+            android:hint="@string/activity_registration_email"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/tendp"
+            android:maxLength="70"
+            android:singleLine="true"
+            android:textSize="@dimen/font_small" />
+
+        <com.tracmojo.customwidget.CustomEditText
+            app:fontNameForEditText="Roboto-Regular.ttf"
+            android:id="@+id/activity_registration_etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginRight="@dimen/twenty"
+            android:layout_marginTop="@dimen/tendp"
+            android:drawablePadding="@dimen/tendp"
+            android:background="@drawable/edit_box_background_solid"
+            android:hint="@string/activity_registration_password"
+            android:inputType="textPassword"
+            android:padding="@dimen/tendp"
+            android:maxLength="60"
+            android:singleLine="true"
+            android:textSize="@dimen/font_small" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tendp">
+
+            <com.tracmojo.customwidget.CustomEditText
+                app:fontNameForEditText="Roboto-Regular.ttf"
+                android:id="@+id/activity_registration_etCountryCode"
+                android:layout_width="@dimen/sixtydp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty"
+                android:background="@drawable/edit_box_background_left_corners"
+                android:drawablePadding="@dimen/tendp"
+                android:maxLength="4"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:padding="@dimen/tendp"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_small" />
+
+            <com.tracmojo.customwidget.CustomEditText
+                app:fontNameForEditText="Roboto-Regular.ttf"
+                android:id="@+id/activity_registration_etPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/twenty"
+                android:background="@drawable/edit_box_background_right_corners"
+                android:drawablePadding="@dimen/tendp"
+                android:hint="@string/activity_registration_phone_number"
+                android:inputType="number"
+                android:padding="@dimen/tendp"
+                android:singleLine="true"
+                android:maxLength="15"
+                android:textSize="@dimen/font_small" />
+
+        </LinearLayout>
+
+        <com.tracmojo.customwidget.CustomTextView
+            app:fontName="Roboto-Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginRight="@dimen/twenty"
+            android:layout_marginTop="@dimen/tendp"
+            android:text="@string/activity_registration_view_privacy_policy"
+            android:textColor="@color/blue_button_default_color"
+            android:textSize="@dimen/font_small"
+            android:id="@+id/activity_registration_tvViewPrivacyPolicy" />
+
+        <com.tracmojo.customwidget.CustomButton
+            app:fontNameForButton="Roboto-Regular.ttf"
+            android:id="@+id/activity_registration__btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginRight="@dimen/twenty"
+            android:layout_marginTop="@dimen/twenty"
+            android:padding="@dimen/tendp"
+            android:textAllCaps="false"
+            android:background="@drawable/dark_blue_button_selector"
+            android:text="@string/activity_registration_submit"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_medium" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/thirtyfive_dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal">
+            <ImageView
+                android:layout_width="@dimen/fifty_dp"
+                android:layout_height="@dimen/fifty_dp"
+                android:background="@drawable/facebook_circular_background"
+                android:padding="@dimen/tendp"
+                android:src="@drawable/ic_login_facebook"
+                android:id="@+id/activity_registration_ivFacebook" />
+            <ImageView
+                android:layout_width="@dimen/fifty_dp"
+                android:layout_height="@dimen/fifty_dp"
+                android:layout_marginLeft="@dimen/twenty"
+                android:background="@drawable/google_circular_background"
+                android:padding="@dimen/tendp"
+                android:src="@drawable/ic_login_google"
+                android:id="@+id/activity_registration_ivGooglePlus" />
+            <ImageView
+                android:layout_width="@dimen/fifty_dp"
+                android:layout_height="@dimen/fifty_dp"
+                android:layout_marginLeft="@dimen/twenty"
+                android:src="@drawable/ic_login_twitter"
+                android:padding="@dimen/tendp"
+                android:background="@drawable/twitter_circular_background"
+                android:id="@+id/activity_registration_ivTwitter" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

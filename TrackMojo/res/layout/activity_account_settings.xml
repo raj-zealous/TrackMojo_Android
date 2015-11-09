@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fragment_trac_rate_tvTracRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_home_list_header"
+            android:gravity="center"
+            android:paddingLeft="@dimen/tendp"
+
+            android:text="@string/account_settings_you_currently"
+            android:textColor="@color/blue_button_default_color"
+            android:textSize="@dimen/font_small" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tendp">
+
+            
+             <!-- android:layout_toLeftOf="@+id/row_comment_list_tvTime"
+                android:layout_toStartOf="@+id/row_comment_list_tvTime" -->
+            <TextView
+                android:id="@+id/activity_account_settings_tvPrimaryEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/tendp"
+               
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/account_settings_primary_email"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_medium" />
+
+            <TextView
+                android:id="@+id/activity_account_settings_etPrimaryEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/activity_account_settings_tvPrimaryEmail"
+                android:layout_marginBottom="@dimen/tendp"
+                android:background="@android:color/transparent"
+                android:hint="@string/activity_registration_email"
+                android:singleLine="true"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_small" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twodp"
+            android:background="@color/edit_box_back" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tendp">
+
+            <TextView
+                android:id="@+id/activity_account_settings_tvSecondaryEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/tendp"
+                android:layout_toLeftOf="@+id/row_comment_list_tvTime"
+                android:layout_toStartOf="@+id/row_comment_list_tvTime"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/account_settings_secondary_email"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_medium" />
+
+            <EditText
+                android:id="@+id/activity_account_settings_etSecondaryEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/activity_account_settings_tvSecondaryEmail"
+                android:layout_marginBottom="@dimen/tendp"
+                android:background="@android:color/transparent"
+                android:hint="@string/activity_registration_email"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_small" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twodp"
+            android:background="@color/edit_box_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/tendp"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_toLeftOf="@+id/row_comment_list_tvTime"
+            android:layout_toStartOf="@+id/row_comment_list_tvTime"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/activity_registration_user_name"
+            android:textColor="@color/regular_text"
+            android:textSize="@dimen/font_medium" />
+
+        <EditText
+            android:id="@+id/activity_account_settings_etFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/activity_account_settings_tvSecondaryEmail"
+            android:layout_marginBottom="@dimen/tendp"
+            android:layout_marginLeft="@dimen/tendp"
+            android:background="@android:color/transparent"
+            android:singleLine="true"
+            android:textColor="@color/regular_text"
+            android:textSize="@dimen/font_small" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twodp"
+            android:background="@color/edit_box_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/tendp"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_toLeftOf="@+id/row_comment_list_tvTime"
+            android:layout_toStartOf="@+id/row_comment_list_tvTime"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/activity_registration_last_name"
+            android:textColor="@color/regular_text"
+            android:textSize="@dimen/font_medium" />
+
+        <EditText
+            android:id="@+id/activity_account_settings_etLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/activity_account_settings_tvSecondaryEmail"
+            android:layout_marginBottom="@dimen/tendp"
+            android:layout_marginLeft="@dimen/tendp"
+            android:background="@android:color/transparent"
+            android:singleLine="true"
+            android:textColor="@color/regular_text"
+            android:textSize="@dimen/font_small" />
+
+        <LinearLayout
+            android:id="@+id/activity_account_settings_linPasswordPart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twodp"
+                android:background="@color/edit_box_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/tendp"
+                android:layout_marginTop="@dimen/twenty"
+                android:layout_toLeftOf="@+id/row_comment_list_tvTime"
+                android:layout_toStartOf="@+id/row_comment_list_tvTime"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/account_settings_old_password"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_medium" />
+
+            <EditText
+                android:id="@+id/activity_account_settings_etCurrentPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/activity_account_settings_tvSecondaryEmail"
+                android:layout_marginBottom="@dimen/tendp"
+                android:layout_marginLeft="@dimen/tendp"
+                android:background="@android:color/transparent"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_small" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twodp"
+                android:background="@color/edit_box_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/tendp"
+                android:layout_marginTop="@dimen/twenty"
+                android:layout_toLeftOf="@+id/row_comment_list_tvTime"
+                android:layout_toStartOf="@+id/row_comment_list_tvTime"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/account_settings_new_password"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_medium" />
+
+            <EditText
+                android:id="@+id/activity_account_settings_etNewPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/activity_account_settings_tvSecondaryEmail"
+                android:layout_marginBottom="@dimen/tendp"
+                android:layout_marginLeft="@dimen/tendp"
+                android:background="@android:color/transparent"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_small" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twodp"
+            android:background="@color/edit_box_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/tendp"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_toLeftOf="@+id/row_comment_list_tvTime"
+            android:layout_toStartOf="@+id/row_comment_list_tvTime"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/activity_registration_phone_number"
+            android:textColor="@color/regular_text"
+            android:textSize="@dimen/font_medium" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/activity_account_settings_etCountryCode"
+                android:layout_width="@dimen/sixtydp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/activity_account_settings_tvSecondaryEmail"
+                android:layout_marginBottom="@dimen/tendp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="4"
+                android:paddingBottom="@dimen/tendp"
+                android:paddingLeft="@dimen/tendp"
+                android:singleLine="true"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_small" />
+
+            <EditText
+                android:id="@+id/activity_account_settings_etPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/activity_account_settings_tvSecondaryEmail"
+                android:layout_marginBottom="@dimen/tendp"
+                android:background="@android:color/transparent"
+                android:inputType="number"
+                android:maxLength="15"
+                android:paddingBottom="@dimen/tendp"
+                android:paddingRight="@dimen/tendp"
+                android:singleLine="true"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_small" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twodp"
+            android:background="@color/edit_box_back" />
+
+
+        <Button
+            android:id="@+id/activity_account_settings_btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/thirtyfive_dp"
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginRight="@dimen/twenty"
+            android:layout_marginTop="@dimen/thirtyfive_dp"
+            android:background="@drawable/blue_button_selector"
+            android:padding="@dimen/tendp"
+            android:text="@string/account_settings_save"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_medium" />
+    </LinearLayout>
+</ScrollView>

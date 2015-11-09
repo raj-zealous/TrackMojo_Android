@@ -1,0 +1,137 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.tracmojo.ui.HelpActivity">
+
+    <RelativeLayout
+        android:id="@+id/activity_help_relWhatIs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/tendp">
+
+        <TextView
+            android:id="@+id/activity_help_tvWhatIs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/row_comment_list_tvTime"
+            android:layout_toStartOf="@+id/row_comment_list_tvTime"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/help_activity_what_is_it"
+            android:textColor="@color/regular_text"
+            android:textSize="@dimen/font_medium" />
+
+        <TextView
+            android:id="@+id/activity_help_tvSoTellMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/activity_help_tvWhatIs"
+            android:text="@string/help_activity_so_tell_me"
+            android:textColor="@color/list_group_name"
+            android:textSize="@dimen/font_small" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/tendp"
+            android:src="@drawable/ic_home_list_expand" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/twodp"
+        android:background="@color/edit_box_back" />
+
+    <RelativeLayout
+        android:id="@+id/activity_help_relWhy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/tendp">
+
+        <TextView
+            android:id="@+id/activity_help_tvWhy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/row_comment_list_tvTime"
+            android:layout_toStartOf="@+id/row_comment_list_tvTime"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/help_activity_why"
+            android:textColor="@color/regular_text"
+            android:textSize="@dimen/font_medium" />
+
+        <TextView
+            android:id="@+id/activity_help_tvHowWill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/activity_help_tvWhy"
+            android:text="@string/help_activity_how_will_it_help_me"
+            android:textColor="@color/list_group_name"
+            android:textSize="@dimen/font_small" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/tendp"
+            android:src="@drawable/ic_home_list_expand" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/twodp"
+        android:background="@color/edit_box_back" />
+
+    <RelativeLayout
+        android:id="@+id/activity_help_relHow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/tendp">
+
+        <TextView
+            android:id="@+id/activity_help_tvHow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/row_comment_list_tvTime"
+            android:layout_toStartOf="@+id/row_comment_list_tvTime"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/help_activity_how"
+            android:textColor="@color/regular_text"
+            android:textSize="@dimen/font_medium" />
+
+        <TextView
+            android:id="@+id/activity_help_tvHowDoIt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/activity_help_tvHow"
+            android:text="@string/help_activity_how_do_i_work"
+            android:textColor="@color/list_group_name"
+            android:textSize="@dimen/font_small" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/tendp"
+            android:src="@drawable/ic_home_list_expand" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/twodp"
+        android:background="@color/edit_box_back" />
+</LinearLayout>

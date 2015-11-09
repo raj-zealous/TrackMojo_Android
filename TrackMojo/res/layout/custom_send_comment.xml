@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/threefifty_dp"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.tracmojo.customwidget.CustomTextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/tendp"
+        android:text="@string/custom_push_notification_dialog_title"
+        android:textColor="@color/blue_button_default_color"
+        android:textSize="@dimen/font_large"
+        app:fontName="Roboto-Regular.ttf" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/twodp"
+        android:background="@color/gray_or" />
+
+    <com.tracmojo.customwidget.CustomEditText
+        android:id="@+id/fogot_pass_et_email"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hundred_dp"
+        android:layout_marginLeft="@dimen/twenty"
+        android:layout_marginRight="@dimen/twenty"
+        android:layout_marginTop="@dimen/tendp"
+        android:background="@drawable/edit_box_background"
+        android:gravity="top|left"
+        android:hint="@string/custom_push_notification_dialog_message_hint"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/tendp"
+        android:textColor="@color/regular_text"
+        android:textSize="@dimen/font_small"
+        app:fontNameForEditText="Roboto-Regular.ttf" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/twenty"
+        android:layout_marginRight="@dimen/twenty">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/add_comment_dialog_cbAnonymous"
+                style="@style/CheckBoxAppTheme"
+                android:layout_width="wrap_content"
+                android:paddingRight="@dimen/checkbox_padding"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_comment_dialog_anonymous"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_micro" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/add_comment_dialog_cbForOwnerOnly"
+                style="@style/CheckBoxAppTheme"
+                android:paddingRight="@dimen/checkbox_padding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_comment_dialog_for_owner_only"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_micro" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/tendp"
+        android:paddingLeft="@dimen/twenty"
+        android:paddingRight="@dimen/twenty"
+        android:paddingTop="@dimen/tendp"
+        android:weightSum="2">
+
+        <com.tracmojo.customwidget.CustomButton
+            android:id="@+id/fogot_pass_btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/dark_blue_button_selector"
+            android:paddingBottom="@dimen/tendp"
+            android:paddingTop="@dimen/tendp"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_small"
+            app:fontNameForButton="Roboto-Regular.ttf" />
+
+        <com.tracmojo.customwidget.CustomButton
+            android:id="@+id/fogot_pass_btn_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/tendp"
+            android:layout_weight="1"
+            android:background="@drawable/blue_button_selector"
+            android:paddingBottom="@dimen/tendp"
+            android:paddingTop="@dimen/tendp"
+            android:text="@string/forgot_pass_send"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_small"
+            app:fontNameForButton="Roboto-Regular.ttf" />
+    </LinearLayout>
+
+</LinearLayout>

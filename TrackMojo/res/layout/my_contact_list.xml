@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layout_above="@+id/my_contact_list_btnDone"
+        android:orientation="vertical">
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etSearchBox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/tendp"
+                android:layout_marginRight="@dimen/tendp"
+                android:layout_marginTop="@dimen/tendp"
+                android:singleLine="true"
+                android:background="@drawable/edit_box_background_solid"
+                android:hint="@string/my_contact_list_search"
+                android:padding="@dimen/tendp"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etSearchBox"
+                android:layout_marginLeft="@dimen/tendp"
+                android:layout_marginTop="@dimen/fivedp"
+                android:gravity="center"
+                android:text="@string/my_contact_list_tap"
+                android:textColor="@color/regular_text" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twodp"
+            android:layout_marginTop="@dimen/tendp"
+            android:background="@color/edit_box_back" />
+
+        <ListView
+            android:id="@+id/listContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tendp"></ListView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/my_contact_list_btnDone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/blue_button_with_no_corners_selector"
+        android:padding="@dimen/tendp"
+        android:text="@string/my_contact_list_done"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_medium" />
+</RelativeLayout>

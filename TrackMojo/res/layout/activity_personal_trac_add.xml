@@ -1,0 +1,341 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:circleview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.tracmojo.ui.PersonalTracAddActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/activity_add_personal_trac_relFooter"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/thirtyfive_dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_home_list_header"
+                android:gravity="center_vertical"
+                android:padding="@dimen/tendp"
+                android:text="@string/activity_add_personal_trac_add_a_per_trac"
+                android:textColor="@color/blue_button_default_color"
+                android:textSize="@dimen/font_small" />
+
+            <EditText
+                android:id="@+id/activity_add_personal_trac_etTracName"
+                style="@style/edit_text_style_with_margins"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hundred_dp"
+                android:gravity="top|left"
+                android:hint="@string/activity_add_personal_trac_enter_your_trac_here" />
+
+            <TextView
+                style="@style/text_view_blue_style_with_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_add_personal_trac_or_choose_from_these_trac_ideas" />
+
+            <TextView
+                android:id="@+id/activity_add_personal_trac_tvChooseTracIdeas"
+                style="@style/edit_text_style_with_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_drop_down" />
+
+            <TextView
+                style="@style/text_view_blue_style_with_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_add_personal_trac_select_the_trac" />
+
+            <TextView
+                android:id="@+id/activity_add_personal_trac_tvChooseTracWordings"
+                style="@style/edit_text_style_with_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_drop_down" />
+
+            <TextView
+                style="@style/text_view_blue_style_with_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twenty"
+                android:text="@string/activity_add_personal_trac_or_enter_your_own_custom_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twodp"
+                android:layout_marginLeft="@dimen/tendp"
+                android:layout_marginRight="@dimen/tendp"
+                android:layout_marginTop="@dimen/tendp"
+                android:background="@color/edit_box_back" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tendp"
+                android:orientation="horizontal"
+                android:padding="@dimen/tendp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/thirtyfive_dp"
+                        android:layout_height="@dimen/thritysp"
+                        android:background="@drawable/gray_border_circular_background"
+                        android:padding="@dimen/threedp">
+
+                        <com.tracmojo.customwidget.CircularDrawable
+                            android:id="@+id/activity_add_personal_trac_cdTracOne"
+                            android:layout_width="@dimen/thirtyfive_dp"
+                            android:layout_height="@dimen/thritysp"
+                            android:layout_centerInParent="true"
+                            circleview:cFillColor="@color/custom_trac_one"
+                            circleview:cIsShadow="false" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/activity_add_personal_trac_etCustomTracWord1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fivedp"
+                        android:layout_marginRight="@dimen/fivedp"
+                        android:inputType="textNoSuggestions"
+                        android:imeOptions="actionNext"
+                        android:maxLength="12"
+                        android:hint="@string/activity_add_personal_trac_cust1"
+                        android:background="@drawable/single_line_edit_box_background"
+                        android:singleLine="true"
+                        android:textSize="@dimen/font_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/thirtyfive_dp"
+                        android:layout_height="@dimen/thritysp"
+                        android:padding="@dimen/threedp"
+                        android:background="@drawable/gray_border_circular_background">
+
+                        <com.tracmojo.customwidget.CircularDrawable
+                            android:id="@+id/activity_add_personal_trac_cdTracTwo"
+                            android:layout_width="@dimen/thirtyfive_dp"
+                            android:layout_height="@dimen/thritysp"
+                            android:layout_centerInParent="true"
+                            circleview:cFillColor="@color/custom_trac_two"
+                            circleview:cIsShadow="false" />
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/activity_add_personal_trac_etCustomTracWord2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fivedp"
+                        android:layout_marginRight="@dimen/fivedp"
+                        android:maxLength="12"
+                        android:inputType="textNoSuggestions"
+                        android:hint="@string/activity_add_personal_trac_cust2"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/single_line_edit_box_background"
+                        android:singleLine="true"
+                        android:textSize="@dimen/font_small" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/tendp"
+                android:paddingRight="@dimen/tendp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/thirtyfive_dp"
+                        android:layout_height="@dimen/thritysp"
+                        android:background="@drawable/gray_border_circular_background"
+                        android:padding="@dimen/threedp">
+
+                        <com.tracmojo.customwidget.CircularDrawable
+                            android:id="@+id/activity_add_personal_trac_cdTracThree"
+                            android:layout_width="@dimen/thirtyfive_dp"
+                            android:layout_height="@dimen/thritysp"
+                            android:layout_centerInParent="true"
+                            circleview:cFillColor="@color/custom_trac_three"
+                            circleview:cIsShadow="false" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/activity_add_personal_trac_etCustomTracWord3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fivedp"
+                        android:layout_marginRight="@dimen/fivedp"
+                        android:inputType="textNoSuggestions"
+                        android:maxLength="12"
+                        android:hint="@string/activity_add_personal_trac_cust3"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/single_line_edit_box_background"
+                        android:singleLine="true"
+                        android:textSize="@dimen/font_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/thirtyfive_dp"
+                        android:layout_height="@dimen/thritysp"
+                        android:padding="@dimen/threedp"
+                        android:background="@drawable/gray_border_circular_background">
+
+                        <com.tracmojo.customwidget.CircularDrawable
+                            android:id="@+id/activity_add_personal_trac_cdTracFour"
+                            android:layout_width="@dimen/thirtyfive_dp"
+                            android:layout_height="@dimen/thritysp"
+                            android:layout_centerInParent="true"
+                            circleview:cFillColor="@color/custom_trac_four"
+                            circleview:cIsShadow="false" />
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/activity_add_personal_trac_etCustomTracWord4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fivedp"
+                        android:layout_marginRight="@dimen/fivedp"
+                        android:imeOptions="actionNext"
+                        android:maxLength="12"
+                        android:inputType="textNoSuggestions"
+                        android:hint="@string/activity_add_personal_trac_cust4"
+                        android:background="@drawable/single_line_edit_box_background"
+                        android:singleLine="true"
+                        android:textSize="@dimen/font_small" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/tendp"
+                android:paddingLeft="@dimen/tendp"
+                android:paddingRight="@dimen/tendp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/thirtyfive_dp"
+                        android:layout_height="@dimen/thritysp"
+                        android:background="@drawable/gray_border_circular_background"
+                        android:padding="@dimen/threedp">
+
+                        <com.tracmojo.customwidget.CircularDrawable
+                            android:id="@+id/activity_add_personal_trac_cdTracFive"
+                            android:layout_width="@dimen/thirtyfive_dp"
+                            android:layout_height="@dimen/thritysp"
+                            android:layout_centerInParent="true"
+                            circleview:cFillColor="@color/custom_trac_five"
+                            circleview:cIsShadow="false" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/activity_add_personal_trac_etCustomTracWord5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fivedp"
+                        android:layout_marginRight="@dimen/fivedp"
+                        android:inputType="textNoSuggestions"
+                        android:imeOptions="actionDone"
+                        android:hint="@string/activity_add_personal_trac_cust5"
+                        android:maxLength="12"
+                        android:background="@drawable/single_line_edit_box_background"
+                        android:singleLine="true"
+                        android:textSize="@dimen/font_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/activity_add_personal_trac_relFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/edit_box_back"
+        android:padding="@dimen/tendp">
+
+        <TextView
+            android:id="@+id/activity_add_personal_trac_tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/activity_add_personal_trac_back"
+            android:textColor="@color/blue_button_default_color"
+            android:textSize="@dimen/font_medium" />
+
+        <TextView
+            android:id="@+id/activity_add_personal_trac_tvNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/activity_add_personal_trac_next"
+            android:textColor="@color/blue_button_default_color"
+            android:textSize="@dimen/font_medium" />
+
+    </RelativeLayout>
+</RelativeLayout>

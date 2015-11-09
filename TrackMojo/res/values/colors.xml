@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="blue_button_default_color">#0177B5</color>
+    <color name="add_follower_circle">#ff25dfdb</color>
+    <color name="add_participants_circle">#ffed3e3e</color>
+    <color name="blue_button_light">#5a0177b5</color>
+    <color name="blue_butoon_pressed_color">#0A5479</color>
+    <color name="gray_or">#ffc2c2c2</color>
+    <color name="or_text">#6e6e6e</color>
+    <color name="regular_text">#555555</color>
+    <color name="facebook_back">#ff2e58a2</color>
+    <color name="google_back">#ffa62d25</color>
+    <color name="twitter_back">#ff54b8ec</color>
+    <color name="edit_box_back">#ffeeeeee</color>
+    <color name="edit_box_phone">#ff424242</color>
+    <color name="tab_back_color">#fff9f9f9</color>
+    <color name="tab_text_gray">#ff818181</color>
+    <color name="home_header_line">#ffcecece</color>
+    <color name="list_text">#4a4a4a</color>
+    <color name="list_oval_shadow">#555555</color>
+    <color name="list_group_name">#b1b1b1</color>
+    <color name="add_trac_dialog_circle_back">#ff0378b5</color>
+    <color name="add_trac_dialog_tranceparncy">#cc000000</color>
+    <color name="home_add_trac_red">#fffe2728</color>
+
+    <color name="trac_review_graph_type">#ff1e1e1e</color>
+
+    <color name="custom_trac_five">#ffff4b24</color>
+    <color name="custom_trac_four">#ffff920a</color>
+    <color name="custom_trac_three">#fffeed00</color>
+    <color name="custom_trac_two">#ffd3f40a</color>
+    <color name="custom_trac_one">#ff41ce20</color>
+
+    <color name="trac_color">#0175b9</color>
+    <color name="mojo_color">#005d93</color>
+
+    <color name="gray_circle">#939393</color>
+</resources>

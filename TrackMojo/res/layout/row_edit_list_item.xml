@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:circleview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/tendp"
+        android:layout_toLeftOf="@+id/row_edit_list_item_linManageOptions"
+        android:orientation="vertical">
+
+        <com.tracmojo.customwidget.CustomTextView
+            android:id="@+id/row_edit_list_item_tvGroupName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/list_group_name"
+            android:textSize="@dimen/font_small"
+            android:text="sd"
+            app:fontName="Roboto-Regular.ttf" />
+
+        <com.tracmojo.customwidget.CustomTextView
+            android:id="@+id/row_edit_list_item_tvGoal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/list_text"
+            android:textSize="@dimen/font_small"
+            android:text="sd"
+            app:fontName="Roboto-Regular.ttf" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row_edit_list_item_linManageOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/tendp"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:id="@+id/row_edit_list_item_ivEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/tendp"
+            android:src="@drawable/ic_list_edit"/>
+        <ImageView
+            android:id="@+id/row_edit_list_item_ivDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_list_delete"/>
+
+        <ToggleButton
+            android:id="@+id/row_edit_list_item_tbFollow"
+            android:layout_width="@dimen/noti_width"
+            android:layout_height="@dimen/fourtydp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/custom_toggle"
+            android:textOff=""
+            android:textOn="" />
+
+    </LinearLayout>
+
+</RelativeLayout>

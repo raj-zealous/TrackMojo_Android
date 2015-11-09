@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/trac_color"
+    tools:context="com.lotteryapp.activities.IntroductionActivity">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"/>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_below="@+id/imageView1"
+        android:layout_above="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/activity_intro_btnOKGotIt"
+        android:background="@android:color/transparent"
+        android:padding="@dimen/_10sdp"
+        app:fillColor="@android:color/white"
+        app:pageColor="@android:color/black"
+       
+        app:strokeWidth="0dp" />
+
+    <Button
+        android:id="@+id/activity_intro_btnOKGotIt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_alignParentBottom="true"
+        android:textAllCaps="false"
+        android:padding="@dimen/_10sdp"
+        android:text="Ok, got it!"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_16sdp" />
+
+</RelativeLayout>

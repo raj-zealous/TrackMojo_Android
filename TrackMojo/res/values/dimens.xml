@@ -1,0 +1,120 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <integer name="num_cols">1</integer>
+
+    <dimen name="halfdp">0.25dp</dimen>
+    <dimen name="onedp">1dp</dimen>
+    <dimen name="twodp">2dp</dimen>
+    <dimen name="threedp">3dp</dimen>
+    <dimen name="fourdp">4dp</dimen>
+    <dimen name="fivedp">5dp</dimen>
+    <dimen name="eightdp">0dp</dimen>
+    <dimen name="btmpading">7dp</dimen>
+    <dimen name="tendp">10dp</dimen>
+    <dimen name="twelve_dp">12dp</dimen>
+    <dimen name="fifteen">15dp</dimen>
+    <dimen name="eighteen">18dp</dimen>
+    <dimen name="twenty">20dp</dimen>
+    <dimen name="twentyfivedp">25dp</dimen>
+    <dimen name="border">1dp</dimen>
+    <dimen name="alphawidth">30dp</dimen>
+    <dimen name="thirtyfive_dp">35dp</dimen>
+    <dimen name="thirtyfive_dp_for_notification">35dp</dimen>
+    <dimen name="fourtyfive">45dp</dimen>
+    <dimen name="fourtydp">40dp</dimen>
+    <dimen name="fifty_dp">50dp</dimen>
+    <dimen name="fourtin">14sp</dimen>
+    <dimen name="twelve">12sp</dimen>
+    <dimen name="tensp">10sp</dimen>
+    <dimen name="sixteen">16sp</dimen>
+    <dimen name="medium">18sp</dimen>
+    <dimen name="twentysp">20sp</dimen>
+    <dimen name="twentytwo">22sp</dimen>
+    <dimen name="twentyfivesp">25sp</dimen>
+    <dimen name="thritysp">30sp</dimen>
+    <dimen name="ratingbar_height">20dp</dimen>
+    <dimen name="message_icon_size">15dp</dimen>
+    <dimen name="fifty_five">55dp</dimen>
+    <dimen name="sixtydp">60dp</dimen>
+    <dimen name="seventy_dp">75dp</dimen>
+    <dimen name="eighty_dp">80dp</dimen>
+    <dimen name="nintydp">90dp</dimen>
+    <dimen name="nintydp_for_notification">60dp</dimen>
+    <dimen name="hundred_dp">100dp</dimen>
+    <dimen name="one_ten">110dp</dimen>
+    <dimen name="hundred_for_searchdp">100dp</dimen>
+    <dimen name="onetwenty">120dp</dimen>
+    <dimen name="onefifty">150dp</dimen>
+    <dimen name="oneeighty">180dp</dimen>
+    <dimen name="twohundred">200dp</dimen>
+    <dimen name="twofifty">218dp</dimen>
+    <dimen name="threehundred_dp">250dp</dimen>
+    <dimen name="threehundred_for_image_dp">300dp</dimen>
+    <dimen name="threefifty_dp">260dp</dimen>
+    <dimen name="eighthundred_dp">550dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="photo_width">110dp</dimen>
+    <dimen name="photo_height">110dp</dimen>
+
+    <!-- FoodType -->
+    <dimen name="food_type_round_small">120dp</dimen>
+    <dimen name="food_type_round_mid">130dp</dimen>
+    <dimen name="food_type_round_big">150dp</dimen>
+    <dimen name="dialog_width">320dp</dimen>
+    <dimen name="dialog_height">400dp</dimen>
+
+    <dimen name="font_micro">12sp</dimen>
+    <dimen name="font_small">14sp</dimen>
+    <dimen name="font_medium">18sp</dimen>
+    <dimen name="font_large">22sp</dimen>
+    <dimen name="font_xlarge">26sp</dimen>
+
+    <dimen name="five">5dp</dimen>
+    <dimen name="ten">10dp</dimen>
+    <dimen name="fourty">40dp</dimen>
+    <dimen name="font_15">15sp</dimen>
+
+    <dimen name="noti_width">60dp</dimen>
+    <dimen name="dialog_twenty">20dp</dimen>
+
+    <dimen name="shadow_width">5dp</dimen>
+    <dimen name="slidingmenu_offset">60dp</dimen>
+
+    <!--For The Canvas-->
+    <dimen name="dp15">11dp</dimen>
+    <dimen name="dp17">13dp</dimen>
+    <dimen name="dp18">16dp</dimen>
+    <dimen name="dp120">140dp</dimen>
+    <dimen name="dp300">180dp</dimen>
+    <dimen name="dpAngle300">195dp</dimen>
+    <dimen name="dp325">210dp</dimen>
+    <dimen name="dp350">230dp</dimen>
+    <dimen name="dp375">253dp</dimen>
+    <dimen name="dp400">270dp</dimen>
+    <dimen name="dp450">300dp</dimen>
+
+    <dimen name="dp50">50dp</dimen>
+    <dimen name="dp65">72dp</dimen>
+    <dimen name="dp70">82dp</dimen>
+    <dimen name="dp80">120dp</dimen>
+    <dimen name="dp85">95dp</dimen>
+    <dimen name="dp125">62dp</dimen>
+    <dimen name="dp140">160dp</dimen>
+    <dimen name="dp175">190dp</dimen>
+    <dimen name="dp170">190dp</dimen>
+    <dimen name="dp225">240dp</dimen>
+    <dimen name="dp245">265dp</dimen>
+    <dimen name="dp145">145dp</dimen>
+    <dimen name="dp130">90dp</dimen>
+    <dimen name="canvas_height">300dp</dimen>
+    <dimen name="margin_top">8dp</dimen>
+    <dimen name="margin_left">100dp</dimen>
+
+    <dimen name="checkbox_padding">0dp</dimen>
+
+</resources>

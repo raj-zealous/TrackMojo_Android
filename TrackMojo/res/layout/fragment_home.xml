@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <ExpandableListView
+        android:id="@+id/lvExp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000" />
+
+    <TextView
+        android:id="@+id/fragment_home_tvNoTracFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_dashboard_home_no_trac_found"
+        android:textSize="@dimen/font_large"
+        android:textColor="@color/list_text"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true" />
+
+    <include layout="@layout/custom_add_trac_dialog"
+        android:id="@+id/fragment_home_llCustomAddDialog"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:visibility="gone"
+        />
+</RelativeLayout>
