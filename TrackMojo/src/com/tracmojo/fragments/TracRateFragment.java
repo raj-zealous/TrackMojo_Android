@@ -9,6 +9,7 @@ import org.json.JSONObject;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -30,6 +31,7 @@ import com.tracmojo.R;
 import com.tracmojo.TracMojoApplication;
 import com.tracmojo.model.RateOption;
 import com.tracmojo.model.Trac;
+import com.tracmojo.ui.HelpActivity;
 import com.tracmojo.util.Util;
 import com.tracmojo.webservice.VolleyStringRequest;
 import com.tracmojo.webservice.Webservices;
@@ -88,7 +90,10 @@ public class TracRateFragment extends BaseFragment implements OnClickListener {
         mContext.ivHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Util.showAlertDialog(mContext,getString(R.string.app_name),getString(R.string.help_text_for_trac_rate_screen));
+            	
+            	Intent intent = new Intent(getActivity(), HelpActivity.class);
+        		startActivity(intent);
+                //Util.showAlertDialog(mContext,getString(R.string.app_name),getString(R.string.help_text_for_trac_rate_screen));
             }
         });
 

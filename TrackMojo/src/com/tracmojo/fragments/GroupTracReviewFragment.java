@@ -74,6 +74,7 @@ import com.tracmojo.model.GraphModel;
 import com.tracmojo.ui.AddFollowersActivity;
 import com.tracmojo.ui.AddParticipantsActivity;
 import com.tracmojo.ui.DashboardActivity;
+import com.tracmojo.ui.HelpActivity;
 import com.tracmojo.util.OnSwipeTouchListener;
 import com.tracmojo.util.Util;
 import com.tracmojo.webservice.VolleyStringRequest;
@@ -208,8 +209,11 @@ public class GroupTracReviewFragment extends BaseFragment implements OnClickList
 		mContext.ivHelp.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Util.showAlertDialog(mContext, getString(R.string.app_name),
-						getString(R.string.help_text_for_trac_review_screen));
+				
+				Intent intent = new Intent(getActivity(), HelpActivity.class);
+        		startActivity(intent);
+//				Util.showAlertDialog(mContext, getString(R.string.app_name),
+//						getString(R.string.help_text_for_trac_review_screen));
 			}
 		});
 

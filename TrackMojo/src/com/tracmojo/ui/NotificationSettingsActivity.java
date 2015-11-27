@@ -10,6 +10,7 @@ import org.json.JSONObject;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -71,7 +72,10 @@ public class NotificationSettingsActivity extends BaseActivity{
         ivHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Util.showAlertDialog(mContext,getString(R.string.app_name),getString(R.string.help_text_for_notification_screen));
+            	
+            	Intent intent = new Intent(NotificationSettingsActivity.this, HelpActivity.class);
+        		startActivity(intent);
+                //Util.showAlertDialog(mContext,getString(R.string.app_name),getString(R.string.help_text_for_notification_screen));
             }
         });
 

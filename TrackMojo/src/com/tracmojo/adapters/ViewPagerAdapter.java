@@ -2,26 +2,26 @@ package com.tracmojo.adapters;
 
 import com.tracmojo.R;
 import com.tracmojo.customwidget.CustomTextView;
+import com.tracmojo.ui.DashboardActivity;
+import com.tracmojo.ui.HelpSliderActivity;
+import com.tracmojo.ui.LoginActivity;
+import com.tracmojo.util.AppSession;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v4.view.PagerAdapter;
-import android.text.Html;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 public class ViewPagerAdapter extends PagerAdapter {
 	CustomTextView[] tArray;
 	Activity mActivity;
-	int strIds1[] = { R.string.text1, -1, -1, R.string.text2, -1, -1, R.string.text3 };
-	int strIds2[] = { R.string.text4, R.string.text5, R.string.text6, R.string.text7, R.string.text8, R.string.text9,
-			R.string.text10 };
-	int strIds3[] = { R.string.text11, R.string.text12, R.string.text13, R.string.text14, R.string.text15,
-			R.string.text16, -1 };
-	int strIds4[] = { R.string.text17, R.string.text18, R.string.text19, R.string.text20, R.string.text21,
-			R.string.text22, -1 };
+	int imgId[] = { R.drawable.h1, R.drawable.h2, R.drawable.h3, R.drawable.h4, R.drawable.h5, R.drawable.h6 };
 
 	public ViewPagerAdapter(Activity mActivity) {
 		super();
@@ -31,7 +31,7 @@ public class ViewPagerAdapter extends PagerAdapter {
 
 	@Override
 	public int getCount() {
-		return 4;
+		return imgId.length;
 	}
 
 	@Override
@@ -48,71 +48,65 @@ public class ViewPagerAdapter extends PagerAdapter {
 
 		RelativeLayout rl = (RelativeLayout) itemView.findViewById(R.id.rl);
 
-		CustomTextView t1 = (CustomTextView) itemView.findViewById(R.id.textView1);
-		CustomTextView t2 = (CustomTextView) itemView.findViewById(R.id.textView2);
-		CustomTextView t3 = (CustomTextView) itemView.findViewById(R.id.textView3);
-		CustomTextView t4 = (CustomTextView) itemView.findViewById(R.id.textView4);
-		CustomTextView t5 = (CustomTextView) itemView.findViewById(R.id.textView5);
-		CustomTextView t6 = (CustomTextView) itemView.findViewById(R.id.textView6);
-		CustomTextView t7 = (CustomTextView) itemView.findViewById(R.id.textView7);
+		ImageView imageView1 = (ImageView) itemView.findViewById(R.id.imageView1);
+		ImageView buttonGotIt = (ImageView) itemView.findViewById(R.id.buttonGotIt);
+		ImageView imageViewClose = (ImageView) itemView.findViewById(R.id.imageViewClose);
 
-		CustomTextView[] tArray = { t1, t2, t3, t4, t5, t6, t7 };
+		imageView1.setImageResource(imgId[position]);
 
-		setTextMethod(position, tArray);
+		if (position == 5) {
+			buttonGotIt.setVisibility(View.VISIBLE);
+			imageViewClose.setVisibility(View.GONE);
+		} else {
+			buttonGotIt.setVisibility(View.GONE);
+			imageViewClose.setVisibility(View.VISIBLE);
+		}
+
+		imageViewClose.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+
+				SharedPreferences preferences;
+				AppSession session = new AppSession(mActivity);
+				preferences = session.getPreferences();
+				Intent intent = null;
+				int userid = preferences.getInt("userid", -1);
+				if (userid == -1) {
+					intent = new Intent(mActivity, LoginActivity.class);
+				} else {
+					intent = new Intent(mActivity, DashboardActivity.class);
+				}
+				mActivity.startActivity(intent);
+				mActivity.finish();
+			}
+		});
+
+		buttonGotIt.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+
+				SharedPreferences preferences;
+				AppSession session = new AppSession(mActivity);
+				preferences = session.getPreferences();
+				Intent intent = null;
+				int userid = preferences.getInt("userid", -1);
+				if (userid == -1) {
+					intent = new Intent(mActivity, LoginActivity.class);
+				} else {
+					intent = new Intent(mActivity, DashboardActivity.class);
+				}
+				mActivity.startActivity(intent);
+				mActivity.finish();
+			}
+		});
 
 		container.addView(rl);
 
 		return itemView;
-	}
-
-	// @Override
-	// public void destroyItem(ViewGroup container, int position, Object object)
-	// {
-	// ((ViewPager) container).removeView((RelativeLayout) object);
-	// }
-
-	private void setTextMethod(int position, CustomTextView[] tArray2) {
-		
-		
-		if(position==0)
-		{
-			tArray2[0].setGravity(Gravity.CENTER);
-			tArray2[6].setGravity(Gravity.RIGHT|Gravity.CENTER);
-		}
-		else
-		{
-			tArray2[0].setGravity(Gravity.LEFT);
-			tArray2[6].setGravity(Gravity.LEFT);
-		}
-		
-		
-		for (int x = 0; x < tArray2.length; x++) {
-			tArray2[x].setText("");
-		}
-
-		for (int x = 0; x < tArray2.length; x++) {
-
-			if (position == 0) {
-
-				
-				if (strIds1[x] != -1)
-					tArray2[x].setText(Html.fromHtml(mActivity.getResources().getString(strIds1[x])));
-			} else if (position == 1) {
-				if (strIds2[x] != -1)
-					tArray2[x].setText(Html.fromHtml(mActivity.getResources().getString(strIds2[x])));
-			}
-
-			else if (position == 2) {
-				if (strIds3[x] != -1)
-					tArray2[x].setText(Html.fromHtml(mActivity.getResources().getString(strIds3[x])));
-			}
-
-			else if (position == 3) {
-				if (strIds4[x] != -1)
-					tArray2[x].setText(Html.fromHtml(mActivity.getResources().getString(strIds4[x])));
-			}
-
-		}
 	}
 
 	@Override

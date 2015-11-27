@@ -123,7 +123,10 @@ public class ServiceActivity extends BaseActivity {
         ivHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Util.showAlertDialog(mContext,getString(R.string.app_name),getString(R.string.help_text_for_service_screen));
+            	
+            	Intent intent = new Intent(ServiceActivity.this, HelpActivity.class);
+        		startActivity(intent);
+               // Util.showAlertDialog(mContext,getString(R.string.app_name),getString(R.string.help_text_for_service_screen));
             }
         });
     }

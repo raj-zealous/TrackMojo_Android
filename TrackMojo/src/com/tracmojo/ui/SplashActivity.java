@@ -52,24 +52,25 @@ public class SplashActivity extends Activity {
 			@Override
 			public void run() {
 
-				if (Util.getIsFirstTimepreference(getApplicationContext()).equals("true")) {
-					Intent filterIntent = new Intent(mContext, HelpSliderActivity.class);
-					filterIntent.putExtra("isFrom", "splash");
-					startActivity(filterIntent);
-					finish();
-				}
-
-				else {
-
-					Intent intent = null;
-					int userid = preferences.getInt("userid", -1);
-					if (userid == -1) {
-						intent = new Intent(mContext, LoginActivity.class);
-					} else {
-						intent = new Intent(mContext, DashboardActivity.class);
-					}
+				Intent intent = null;
+				int userid = preferences.getInt("userid", -1);
+				if (userid == -1) {
+					intent = new Intent(mContext, LoginActivity.class);
 					startActivity(intent);
 					finish();
+				} else {
+
+					if (Util.getIsFirstTimepreference(getApplicationContext()).equals("true")) {
+						Intent filterIntent = new Intent(mContext, HelpSliderActivity.class);
+						filterIntent.putExtra("isFrom", "splash");
+						startActivity(filterIntent);
+						finish();
+					} else {
+
+						intent = new Intent(mContext, DashboardActivity.class);
+						startActivity(intent);
+						finish();
+					}
 				}
 
 			}

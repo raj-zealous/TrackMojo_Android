@@ -650,9 +650,23 @@ public class RegistrationActivity extends BaseActivity implements GoogleApiClien
     }
 
     private void goToDashboard() {
-        Intent intent = new Intent(mContext, DashboardActivity.class);
-        startActivity(intent);
-        finish();
+    	
+    	
+    	if (Util.getIsFirstTimepreference(getApplicationContext()).equals("true")) {
+			Intent filterIntent = new Intent(mContext, HelpSliderActivity.class);
+			filterIntent.putExtra("isFrom", "splash");
+			startActivity(filterIntent);
+			finish();
+		} else {
+
+			Intent intent = new Intent(mContext, DashboardActivity.class);
+			startActivity(intent);
+			finish();
+		}
+    	
+//        Intent intent = new Intent(mContext, DashboardActivity.class);
+//        startActivity(intent);
+//        finish();
     }
 
     //---------facebook login part----------

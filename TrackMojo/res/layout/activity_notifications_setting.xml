@@ -176,11 +176,72 @@
             android:layout_height="wrap_content"
             android:background="@drawable/ic_home_list_header"
             android:gravity="center_vertical"
+            android:visibility="gone"
             android:padding="@dimen/tendp"
             android:text="@string/notification_settings_following_trac_notification"
             android:textColor="@color/blue_button_default_color"
             android:textSize="@dimen/font_small" />
 
+        
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:padding="@dimen/tendp">
+
+            <TextView
+                android:id="@+id/activity_notification_settings_tvWeeklyReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/activity_notification_settings_tbWeeklyReminder"
+                android:text="@string/notification_settings_a_weekly_reminder_to_review_followed_tracs"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/activity_notification_settings_tvWeeklyReminder"
+                android:layout_toLeftOf="@+id/activity_notification_settings_tbWeeklyReminder"
+
+                android:textColor="@color/list_group_name"
+                android:textSize="@dimen/font_micro" />
+
+            <ToggleButton
+                android:id="@+id/activity_notification_settings_tbWeeklyReminder"
+                android:layout_width="@dimen/fourtydp"
+                android:layout_height="@dimen/twentyfivedp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/custom_toggle"
+                android:textOff=""
+                android:textOn="" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twodp"
+            android:visibility="gone"
+            android:background="@color/edit_box_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_home_list_header"
+            android:gravity="center_vertical"
+            android:padding="@dimen/tendp"
+            android:text="@string/notification_settings_trac_owner_management_notifications"
+            android:textColor="@color/blue_button_default_color"
+            android:textSize="@dimen/font_small" />
+        
+        
+        
+        
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -223,59 +284,12 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/twodp"
             android:background="@color/edit_box_back" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/tendp">
-
-            <TextView
-                android:id="@+id/activity_notification_settings_tvWeeklyReminder"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@+id/activity_notification_settings_tbWeeklyReminder"
-                android:text="@string/notification_settings_a_weekly_reminder_to_review_followed_tracs"
-                android:textColor="@color/regular_text"
-                android:textSize="@dimen/font_small" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/activity_notification_settings_tvWeeklyReminder"
-                android:layout_toLeftOf="@+id/activity_notification_settings_tbWeeklyReminder"
-
-                android:textColor="@color/list_group_name"
-                android:textSize="@dimen/font_micro" />
-
-            <ToggleButton
-                android:id="@+id/activity_notification_settings_tbWeeklyReminder"
-                android:layout_width="@dimen/fourtydp"
-                android:layout_height="@dimen/twentyfivedp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:background="@drawable/custom_toggle"
-                android:textOff=""
-                android:textOn="" />
-
-        </RelativeLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/twodp"
-            android:background="@color/edit_box_back" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic_home_list_header"
-            android:gravity="center_vertical"
-            android:padding="@dimen/tendp"
-            android:text="@string/notification_settings_trac_owner_management_notifications"
-            android:textColor="@color/blue_button_default_color"
-            android:textSize="@dimen/font_small" />
+        
+        
+        
+        
+        
+        
 
         <RelativeLayout
             android:layout_width="match_parent"

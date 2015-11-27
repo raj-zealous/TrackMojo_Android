@@ -157,7 +157,7 @@
     <string name="fragment_trac_review_trac_to_date">trac to date</string>
     <string name="fragment_trac_review_next">Next</string>
     <string name="fragment_trac_review_communicate_with_followers">Communicate with followers</string>
-    <string name="fragment_trac_review_communicate_with_participants_and_followers">Communicate with participants and followers</string>
+    <string name="fragment_trac_review_communicate_with_participants_and_followers">Communicate to participants and followers</string>
     <string name="fragment_trac_review_communicate_with_owner">Communicate with owner</string>
     <string name="fragment_trac_review_share_this_trac">Share this trac</string>
     <string name="fragment_trac_review_view_comments">View/Add Comments</string>
@@ -247,15 +247,15 @@
 
     <!-- NotificationSettings -->
     <string name="notification_settings_header">Notifications</string>
-    <string name="notification_settings_preferred_time_of_day">preferred time of day for notification(in hrs)</string>
-    <string name="notification_settings_participating_trac_notifications">participating trac notifications</string>
+    <string name="notification_settings_preferred_time_of_day">Preferred time of day for notification(in hrs)</string>
+    <string name="notification_settings_participating_trac_notifications">Participating trac notifications</string>
     <string name="notification_settings_its_time_to_tracmojo">It\'s time to tracmojo</string>
     <string name="notification_settings_a_reminder_to_tracmojo">A reminder to tracmojo</string>
     <string name="notification_settings_last_chance_to_tracmojo">Last chance to tracmojo</string>
     <string name="notification_settings_following_trac_notification">following trac notifications</string>
-    <string name="notification_settings_every_time_a_followed_trac_rate_is_completed">Every time a followed trac rate is completed</string>
+    <string name="notification_settings_every_time_a_followed_trac_rate_is_completed">Every time a participant rates a trac</string>
     <string name="notification_settings_a_weekly_reminder_to_review_followed_tracs">A weekly reminder to review followed tracs</string>
-    <string name="notification_settings_trac_owner_management_notifications">trac owner management notifications</string>
+    <string name="notification_settings_trac_owner_management_notifications">Trac owner management notifications</string>
     <string name="notification_settings_every_time_a_participant_joins_or_leaves">Every time a participant joins or leaves a trac</string>
     <string name="notification_settings_every_time_a_followers_joins_or_leaves">Every time a follower joins or leaves a trac</string>
     <string name="notification_settings_preferred_time_dialog_title">Select Preferred Time</string>
