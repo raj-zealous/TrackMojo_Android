@@ -237,9 +237,9 @@ public class HomeFragment extends BaseFragment implements OnClickListener, TracR
 
         mContext.startService(intent);
 
-        if (prefs.getBoolean("isFirstTimmer", true)) {
-            showAlertDialog(getString(R.string.app_name), getString(R.string.activity_dashboard_home_first_timer_message));
-        }
+//        if (prefs.getBoolean("isFirstTimmer", true)) {
+//            showAlertDialog(getString(R.string.app_name), getString(R.string.activity_dashboard_home_first_timer_message));
+//        }
 
         if (Util.checkConnectionWithoutMessage(mContext)) {
             startforFollowers = 0;

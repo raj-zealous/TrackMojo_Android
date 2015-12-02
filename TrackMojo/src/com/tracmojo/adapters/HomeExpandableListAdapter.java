@@ -32,290 +32,294 @@ import com.tracmojo.util.Util;
 
 public class HomeExpandableListAdapter extends BaseExpandableListAdapter {
 
-    private Context mContext;
-    private List<String> _listDataHeader; // header titles
-    // child data in format of header title, child title
-    private HashMap<String, List<Trac>> _listDataChild;
-    private TracMojoApplication application;
-    Animation animation;
-    int parentPosition;
+	private Context mContext;
+	private List<String> _listDataHeader; // header titles
+	// child data in format of header title, child title
+	private HashMap<String, List<Trac>> _listDataChild;
+	private TracMojoApplication application;
+	Animation animation;
+	int parentPosition;
 
-    public HomeExpandableListAdapter(Context context, List<String> listDataHeader,
-                                     HashMap<String, List<Trac>> listChildData) {
-        this.mContext = context;
-        this._listDataHeader = listDataHeader;
-        this._listDataChild = listChildData;
-        this.application = (TracMojoApplication) context.getApplicationContext();
+	public HomeExpandableListAdapter(Context context, List<String> listDataHeader,
+			HashMap<String, List<Trac>> listChildData) {
+		this.mContext = context;
+		this._listDataHeader = listDataHeader;
+		this._listDataChild = listChildData;
+		this.application = (TracMojoApplication) context.getApplicationContext();
 
-        animation = new AlphaAnimation(1, 0);
-        animation.setDuration(1000); // duration - half a second
-        animation.setInterpolator(new LinearInterpolator()); // do not alter animation rate
-        animation.setRepeatCount(Animation.INFINITE); // Repeat animation infinitely
-        animation.setRepeatMode(Animation.REVERSE);
-    }
+		animation = new AlphaAnimation(1, 0);
+		animation.setDuration(1000); // duration - half a second
+		animation.setInterpolator(new LinearInterpolator()); // do not alter
+																// animation
+																// rate
+		animation.setRepeatCount(Animation.INFINITE); // Repeat animation
+														// infinitely
+		animation.setRepeatMode(Animation.REVERSE);
+	}
 
-    @Override
-    public Object getChild(int groupPosition, int childPosititon) {
-        return this._listDataChild.get(this._listDataHeader.get(groupPosition))
-                .get(childPosititon);
-        //return this._listDataChild.get(groupPosition).get(childPosititon);
-    }
+	@Override
+	public Object getChild(int groupPosition, int childPosititon) {
+		return this._listDataChild.get(this._listDataHeader.get(groupPosition)).get(childPosititon);
+		// return this._listDataChild.get(groupPosition).get(childPosititon);
+	}
 
-    @Override
-    public long getChildId(int groupPosition, int childPosition) {
-        return childPosition;
-    }
+	@Override
+	public long getChildId(int groupPosition, int childPosition) {
+		return childPosition;
+	}
 
-    public static class ViewHolder {
-        TextView tvGoal, tvGroupName;
-        ImageView ivRate;
-        //CircularDrawable circularDrawable;
-    }
+	public static class ViewHolder {
+		TextView tvGoal, tvGroupName;
+		ImageView ivRate;
+		// CircularDrawable circularDrawable;
+	}
 
-    @Override
-    public View getChildView(final int groupPosition, final int childPosition,
-                             boolean isLastChild, View convertView, ViewGroup parent) {
+	@Override
+	public View getChildView(final int groupPosition, final int childPosition, boolean isLastChild, View convertView,
+			ViewGroup parent) {
 
-        ViewHolder holder;
+		ViewHolder holder;
 
-        final Trac trac = (Trac) getChild(groupPosition, childPosition);
+		final Trac trac = (Trac) getChild(groupPosition, childPosition);
 
-        if (convertView == null) {
-            LayoutInflater infalInflater = (LayoutInflater) this.mContext
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.row_home_list_item, null);
+		if (convertView == null) {
+			LayoutInflater infalInflater = (LayoutInflater) this.mContext
+					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			convertView = infalInflater.inflate(R.layout.row_home_list_item, null);
 
-            holder = new ViewHolder();
-            holder.ivRate = (ImageView) convertView.findViewById(R.id.row_home_list_item_ivRate);
-            holder.tvGoal = (TextView) convertView.findViewById(R.id.row_home_list_item_tvGoal);
-            holder.tvGroupName = (TextView) convertView.findViewById(R.id.row_home_list_item_tvGroupName);
+			holder = new ViewHolder();
+			holder.ivRate = (ImageView) convertView.findViewById(R.id.row_home_list_item_ivRate);
+			holder.tvGoal = (TextView) convertView.findViewById(R.id.row_home_list_item_tvGoal);
+			holder.tvGroupName = (TextView) convertView.findViewById(R.id.row_home_list_item_tvGroupName);
 
-            convertView.setTag(holder);
-        } else {
-            holder = (ViewHolder) convertView.getTag();
-        }
+			convertView.setTag(holder);
+		} else {
+			holder = (ViewHolder) convertView.getTag();
+		}
 
-        if (trac.getRate().equalsIgnoreCase("-1") && groupPosition!=2) {
-            holder.ivRate.startAnimation(animation);
-        } else {
-            holder.ivRate.clearAnimation();
-        }
+		if (trac.getRate().equalsIgnoreCase("-1") && groupPosition != 2) {
+			holder.ivRate.startAnimation(animation);
+		} else {
+			holder.ivRate.clearAnimation();
+		}
 
-        int mTrac = Integer.parseInt(trac.getLastRate());
-        switch (mTrac) {
-            case 5:
-                holder.ivRate.setImageResource(R.drawable.ic_custom_rate_one);
-                break;
+		int mTrac = Integer.parseInt(trac.getLastRate());
+		switch (mTrac) {
+		case 5:
+			holder.ivRate.setImageResource(R.drawable.ic_custom_rate_one);
+			break;
 
-            case 4:
-                holder.ivRate.setImageResource(R.drawable.ic_custom_rate_two);
-                break;
+		case 4:
+			holder.ivRate.setImageResource(R.drawable.ic_custom_rate_two);
+			break;
 
-            case 3:
-                holder.ivRate.setImageResource(R.drawable.ic_custom_rate_three);
-                break;
+		case 3:
+			holder.ivRate.setImageResource(R.drawable.ic_custom_rate_three);
+			break;
 
-            case 2:
-                holder.ivRate.setImageResource(R.drawable.ic_custom_rate_four);
-                break;
-            case 1:
-                holder.ivRate.setImageResource(R.drawable.ic_custom_rate_five);
-                break;
+		case 2:
+			holder.ivRate.setImageResource(R.drawable.ic_custom_rate_four);
+			break;
+		case 1:
+			holder.ivRate.setImageResource(R.drawable.ic_custom_rate_five);
+			break;
 
-            case -1:
-                /*if(!TextUtils.isEmpty(trac.getLastRate())){
-                    int lastRate = Integer.parseInt(trac.getLastRate());
-                    switch (lastRate) {
-                        case 5:
-                            holder.ivRate.setImageResource(R.drawable.ic_custom_rate_one);
-                            break;
+		case -1:
+			/*
+			 * if(!TextUtils.isEmpty(trac.getLastRate())){ int lastRate =
+			 * Integer.parseInt(trac.getLastRate()); switch (lastRate) { case 5:
+			 * holder.ivRate.setImageResource(R.drawable.ic_custom_rate_one);
+			 * break;
+			 * 
+			 * case 4:
+			 * holder.ivRate.setImageResource(R.drawable.ic_custom_rate_two);
+			 * break;
+			 * 
+			 * case 3:
+			 * holder.ivRate.setImageResource(R.drawable.ic_custom_rate_three);
+			 * break;
+			 * 
+			 * case 2:
+			 * holder.ivRate.setImageResource(R.drawable.ic_custom_rate_four);
+			 * break; case 1:
+			 * holder.ivRate.setImageResource(R.drawable.ic_custom_rate_five);
+			 * break;
+			 * 
+			 * default:
+			 * holder.ivRate.setImageResource(R.drawable.ic_custom_rate_zero);
+			 * break; } } else {
+			 * holder.ivRate.setImageResource(R.drawable.ic_custom_rate_zero); }
+			 */
 
-                        case 4:
-                            holder.ivRate.setImageResource(R.drawable.ic_custom_rate_two);
-                            break;
+			break;
 
-                        case 3:
-                            holder.ivRate.setImageResource(R.drawable.ic_custom_rate_three);
-                            break;
+		default:
+			holder.ivRate.setImageResource(R.drawable.ic_custom_rate_zero);
+			break;
+		}
 
-                        case 2:
-                            holder.ivRate.setImageResource(R.drawable.ic_custom_rate_four);
-                            break;
-                        case 1:
-                            holder.ivRate.setImageResource(R.drawable.ic_custom_rate_five);
-                            break;
+		if (!TextUtils.isEmpty(trac.getGoal()))
+			holder.tvGoal.setText(trac.getGoal());
 
-                        default:
-                            holder.ivRate.setImageResource(R.drawable.ic_custom_rate_zero);
-                            break;
-                    }
-                } else {
-                    holder.ivRate.setImageResource(R.drawable.ic_custom_rate_zero);
-                }*/
+		if (!TextUtils.isEmpty(trac.getGroupName())) {
+			holder.tvGroupName.setVisibility(View.VISIBLE);
+			holder.tvGroupName.setText(trac.getGroupName());
+			if (groupPosition == 2) {
+				holder.tvGroupName.append(" - " + trac.getOwnerName());
+			}
+		} else {
+			if (groupPosition == 2) {
+				holder.tvGroupName.setText(trac.getOwnerName());
+			} else {
+				holder.tvGroupName.setVisibility(View.GONE);
+			}
+		}
 
-                break;
+		/*
+		 * if (!TextUtils.isEmpty(trac.getGroupName()) &&
+		 * !TextUtils.isEmpty(trac.getGroupType())) { holder.tvGroupName.append(
+		 * " - " + trac.getGroupType()); }
+		 */
+		holder.ivRate.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if (trac.getRate().equalsIgnoreCase("-1") && groupPosition != 2) {
+					TracRateFragment tracRateFragment = new TracRateFragment();
+					Bundle bundle = new Bundle();
+					bundle.putSerializable("trac", trac);
+					bundle.putInt("parentPosition", groupPosition);
+					bundle.putInt("childPosition", childPosition);
+					HomeFragment f = (HomeFragment) ((DashboardActivity) mContext).mStacks.get(Util.TAB_HOME)
+							.lastElement();
+					bundle.putInt("firstVisiblePosition", f.getFirstVisiblePostionOfListView());
+					tracRateFragment.setArguments(bundle);
+					if (Util.checkConnection(mContext, mContext.getString(R.string.not_available_while_offlin))
+							&& groupPosition != 2) {
+						((DashboardActivity) mContext).pushFragments(Util.TAB_HOME, tracRateFragment, false, true);
+					}
+				} else {
+					if (groupPosition == 0) {
+						PersonalTracReviewFragment personalTracReviewFragment = new PersonalTracReviewFragment();
+						Bundle bundle = new Bundle();
+						bundle.putInt("trac_id", trac.getId());
+						personalTracReviewFragment.setArguments(bundle);
+						((DashboardActivity) mContext).pushFragments(Util.TAB_HOME, personalTracReviewFragment, false,
+								true);
+					} else if (groupPosition == 1) {
+						GroupTracReviewFragment groupTracReviewFragment = new GroupTracReviewFragment();
+						Bundle bundle = new Bundle();
+						bundle.putInt("trac_id", trac.getId());
+						groupTracReviewFragment.setArguments(bundle);
+						((DashboardActivity) mContext).pushFragments(Util.TAB_HOME, groupTracReviewFragment, false,
+								true);
+					} else if (groupPosition == 2) {
+						if (!TextUtils.isEmpty(trac.getGroupType())) {
+							GroupTracReviewFragment groupTracReviewFragment = new GroupTracReviewFragment();
+							Bundle bundle = new Bundle();
+							bundle.putInt("trac_id", trac.getId());
+							bundle.putBoolean("isFollower", true);
+							groupTracReviewFragment.setArguments(bundle);
+							((DashboardActivity) mContext).pushFragments(Util.TAB_HOME, groupTracReviewFragment, false,
+									true);
+						} else {
+							FollowerTracReviewFragment followerTracReviewFragment = new FollowerTracReviewFragment();
+							Bundle bundle = new Bundle();
+							bundle.putInt("trac_id", trac.getId());
+							followerTracReviewFragment.setArguments(bundle);
+							((DashboardActivity) mContext).pushFragments(Util.TAB_HOME, followerTracReviewFragment,
+									false, true);
+						}
+					}
+				}
+			}
+		});
 
-            default:
-                holder.ivRate.setImageResource(R.drawable.ic_custom_rate_zero);
-                break;
-        }
+		convertView.setOnTouchListener(new OnSwipeTouchListener(mContext) {
 
-        if (!TextUtils.isEmpty(trac.getGoal()))
-            holder.tvGoal.setText(trac.getGoal());
+			public void onSwipeLeft() {
+				// Toast.makeText(mContext, "left", Toast.LENGTH_SHORT).show();
+				if (groupPosition == 0 && !trac.getRate().equalsIgnoreCase("-1")) {
+					PersonalTracReviewFragment personalTracReviewFragment = new PersonalTracReviewFragment();
+					Bundle bundle = new Bundle();
+					bundle.putInt("trac_id", trac.getId());
+					personalTracReviewFragment.setArguments(bundle);
+					((DashboardActivity) mContext).pushFragments(Util.TAB_HOME, personalTracReviewFragment, false,
+							true);
+				} else if (groupPosition == 1 && !trac.getRate().equalsIgnoreCase("-1")) {
+					GroupTracReviewFragment groupTracReviewFragment = new GroupTracReviewFragment();
+					Bundle bundle = new Bundle();
+					bundle.putInt("trac_id", trac.getId());
+					bundle.putBoolean("isFollower", true);
+					groupTracReviewFragment.setArguments(bundle);
+					((DashboardActivity) mContext).pushFragments(Util.TAB_HOME, groupTracReviewFragment, false, true);
+				} else if (groupPosition == 2 && !trac.getRate().equalsIgnoreCase("-1")) {
+					FollowerTracReviewFragment followerTracReviewFragment = new FollowerTracReviewFragment();
+					Bundle bundle = new Bundle();
+					bundle.putInt("trac_id", trac.getId());
+					followerTracReviewFragment.setArguments(bundle);
+					((DashboardActivity) mContext).pushFragments(Util.TAB_HOME, followerTracReviewFragment, false,
+							true);
+				}
+			}
 
-        if (!TextUtils.isEmpty(trac.getGroupName())) {
-            holder.tvGroupName.setVisibility(View.VISIBLE);
-            holder.tvGroupName.setText(trac.getGroupName());
-            if(groupPosition==2){
-                holder.tvGroupName.append(" - " + trac.getOwnerName());
-            }
-        } else {
-            if(groupPosition==2){
-                holder.tvGroupName.setText(trac.getOwnerName());
-            }else {
-                holder.tvGroupName.setVisibility(View.GONE);
-            }
-        }
+			public boolean onTouch(View v, MotionEvent event) {
+				return gestureDetector.onTouchEvent(event);
+			}
+		});
 
-        /*if (!TextUtils.isEmpty(trac.getGroupName()) && !TextUtils.isEmpty(trac.getGroupType())) {
-            holder.tvGroupName.append(" - " + trac.getGroupType());
-        }*/
-        holder.ivRate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (trac.getRate().equalsIgnoreCase("-1") && groupPosition!=2) {
-                    TracRateFragment tracRateFragment = new TracRateFragment();
-                    Bundle bundle = new Bundle();
-                    bundle.putSerializable("trac", trac);
-                    bundle.putInt("parentPosition", groupPosition);
-                    bundle.putInt("childPosition", childPosition);
-                    HomeFragment f = (HomeFragment) ((DashboardActivity) mContext).mStacks.get(Util.TAB_HOME).lastElement();
-                    bundle.putInt("firstVisiblePosition", f.getFirstVisiblePostionOfListView());
-                    tracRateFragment.setArguments(bundle);
-                    if (Util.checkConnection(mContext,mContext.getString(R.string.not_available_while_offlin)) && groupPosition!=2) {
-                        ((DashboardActivity) mContext).pushFragments(Util.TAB_HOME, tracRateFragment, false, true);
-                    }
-                } else {
-                    if(groupPosition==0) {
-                        PersonalTracReviewFragment personalTracReviewFragment = new PersonalTracReviewFragment();
-                        Bundle bundle = new Bundle();
-                        bundle.putInt("trac_id", trac.getId());
-                        personalTracReviewFragment.setArguments(bundle);
-                        ((DashboardActivity) mContext).pushFragments(Util.TAB_HOME, personalTracReviewFragment, false, true);
-                    } else if(groupPosition ==1){
-                        GroupTracReviewFragment groupTracReviewFragment = new GroupTracReviewFragment();
-                        Bundle bundle = new Bundle();
-                        bundle.putInt("trac_id", trac.getId());
-                        groupTracReviewFragment.setArguments(bundle);
-                        ((DashboardActivity) mContext).pushFragments(Util.TAB_HOME, groupTracReviewFragment, false, true);
-                    } else if(groupPosition==2) {
-                        if(!TextUtils.isEmpty(trac.getGroupType())){
-                            GroupTracReviewFragment groupTracReviewFragment = new GroupTracReviewFragment();
-                            Bundle bundle = new Bundle();
-                            bundle.putInt("trac_id", trac.getId());
-                            bundle.putBoolean("isFollower",true);
-                            groupTracReviewFragment.setArguments(bundle);
-                            ((DashboardActivity) mContext).pushFragments(Util.TAB_HOME, groupTracReviewFragment, false, true);
-                        }else {
-                            FollowerTracReviewFragment followerTracReviewFragment = new FollowerTracReviewFragment();
-                            Bundle bundle = new Bundle();
-                            bundle.putInt("trac_id", trac.getId());
-                            followerTracReviewFragment.setArguments(bundle);
-                            ((DashboardActivity) mContext).pushFragments(Util.TAB_HOME, followerTracReviewFragment, false, true);
-                        }
-                    }
-                }
-            }
-        });
+		return convertView;
+	}
 
-        convertView.setOnTouchListener(new OnSwipeTouchListener(mContext) {
+	@Override
+	public int getChildrenCount(int groupPosition) {
+		return this._listDataChild.get(this._listDataHeader.get(groupPosition)).size();
+	}
 
-            public void onSwipeLeft() {
-                //Toast.makeText(mContext, "left", Toast.LENGTH_SHORT).show();
-                if(groupPosition==0 && !trac.getRate().equalsIgnoreCase("-1")) {
-                    PersonalTracReviewFragment personalTracReviewFragment = new PersonalTracReviewFragment();
-                    Bundle bundle = new Bundle();
-                    bundle.putInt("trac_id", trac.getId());
-                    personalTracReviewFragment.setArguments(bundle);
-                    ((DashboardActivity) mContext).pushFragments(Util.TAB_HOME, personalTracReviewFragment, false, true);
-                } else if(groupPosition == 1 && !trac.getRate().equalsIgnoreCase("-1")){
-                    GroupTracReviewFragment groupTracReviewFragment = new GroupTracReviewFragment();
-                    Bundle bundle = new Bundle();
-                    bundle.putInt("trac_id", trac.getId());
-                    bundle.putBoolean("isFollower",true);
-                    groupTracReviewFragment.setArguments(bundle);
-                    ((DashboardActivity) mContext).pushFragments(Util.TAB_HOME, groupTracReviewFragment, false, true);
-                } else if(groupPosition==2 && !trac.getRate().equalsIgnoreCase("-1")) {
-                    FollowerTracReviewFragment followerTracReviewFragment = new FollowerTracReviewFragment();
-                    Bundle bundle = new Bundle();
-                    bundle.putInt("trac_id", trac.getId());
-                    followerTracReviewFragment.setArguments(bundle);
-                    ((DashboardActivity) mContext).pushFragments(Util.TAB_HOME, followerTracReviewFragment, false, true);
-                }
-            }
+	@Override
+	public Object getGroup(int groupPosition) {
+		return this._listDataHeader.get(groupPosition);
+	}
 
-            public boolean onTouch(View v, MotionEvent event) {
-                return gestureDetector.onTouchEvent(event);
-            }
-        });
+	@Override
+	public int getGroupCount() {
+		return this._listDataHeader.size();
+	}
 
-        return convertView;
-    }
+	@Override
+	public long getGroupId(int groupPosition) {
+		return groupPosition;
+	}
 
-    @Override
-    public int getChildrenCount(int groupPosition) {
-        return this._listDataChild.get(this._listDataHeader.get(groupPosition))
-                .size();
-    }
+	@Override
+	public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
 
-    @Override
-    public Object getGroup(int groupPosition) {
-        return this._listDataHeader.get(groupPosition);
-    }
+		parentPosition = groupPosition;
+		String headerTitle = (String) getGroup(groupPosition);
+		if (convertView == null) {
+			LayoutInflater infalInflater = (LayoutInflater) this.mContext
+					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			convertView = infalInflater.inflate(R.layout.row_home_list_header, null);
+		}
 
-    @Override
-    public int getGroupCount() {
-        return this._listDataHeader.size();
-    }
+		TextView lblListHeader = (TextView) convertView.findViewById(R.id.row_home_list_header_tvHeader);
+		ImageView ivPlus = (ImageView) convertView.findViewById(R.id.row_home_list_header_tvPlus);
 
-    @Override
-    public long getGroupId(int groupPosition) {
-        return groupPosition;
-    }
+		ivPlus.setImageResource(isExpanded ? R.drawable.ic_home_list_collapse : R.drawable.ic_home_list_expand);
 
-    @Override
-    public View getGroupView(int groupPosition, boolean isExpanded,
-                             View convertView, ViewGroup parent) {
+		lblListHeader.setTypeface(null, Typeface.BOLD);
+		lblListHeader.setText(headerTitle);
 
-        parentPosition = groupPosition;
-        String headerTitle = (String) getGroup(groupPosition);
-        if (convertView == null) {
-            LayoutInflater infalInflater = (LayoutInflater) this.mContext
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.row_home_list_header, null);
-        }
+		return convertView;
+	}
 
-        TextView lblListHeader = (TextView) convertView
-                .findViewById(R.id.row_home_list_header_tvHeader);
-        ImageView ivPlus = (ImageView) convertView
-                .findViewById(R.id.row_home_list_header_tvPlus);
+	@Override
+	public boolean hasStableIds() {
+		return false;
+	}
 
-        ivPlus.setImageResource(isExpanded ? R.drawable.ic_home_list_collapse : R.drawable.ic_home_list_expand);
-
-        lblListHeader.setTypeface(null, Typeface.BOLD);
-        lblListHeader.setText(headerTitle);
-
-        return convertView;
-    }
-
-    @Override
-    public boolean hasStableIds() {
-        return false;
-    }
-
-    @Override
-    public boolean isChildSelectable(int groupPosition, int childPosition) {
-        return true;
-    }
+	@Override
+	public boolean isChildSelectable(int groupPosition, int childPosition) {
+		return true;
+	}
 
 }
