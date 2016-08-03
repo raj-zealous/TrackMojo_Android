@@ -54,6 +54,37 @@ public class DashboardActivity extends BaseActivity {
         setContentView(R.layout.activity_dashboard);
         mContext = this;
 
+        
+        
+        Intent intent = getIntent();
+
+        try{
+            String action = intent.getAction().toUpperCase();
+
+            if(action != null){
+//                if(action.equalsIgnoreCase(getResources().getString(R.string.notification_action_friend))){
+//                        goFrag(getResources().getInteger(R.integer.FRAG_A_INT));
+//                    }
+//                if(action.equalsIgnoreCase(getResources().getString(R.string.notification_action_article))){
+//                        goFrag(getResources().getInteger(R.integer.FRAG_B_INT));
+//                    }
+//                if(action.equalsIgnoreCase(getResources().getString(R.string.notification_action_points))){
+//                        goFrag(getResources().getInteger(R.integer.FRAG_C_INT));
+//                    }
+//                if(action.equalsIgnoreCase(getResources().getString(R.string.notification_action_redeemable))){
+//                        goFrag(getResources().getInteger(R.integer.FRAG_D_INT));
+//                    }
+//                if(action.equalsIgnoreCase(getResources().getString(R.string.notification_action_dance))){
+//                        goFrag(getResources().getInteger(R.integer.FRAG_E_INT));
+//                    }
+                }else{
+                    Log.d("", "Intent was null");
+                }
+            }catch(Exception e){
+                Log.e("", "Problem consuming action from intent", e);              
+            }
+        
+        
         AppSession session = new AppSession(mContext);
         preferences = session.getPreferences();
 

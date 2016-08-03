@@ -120,17 +120,39 @@
 
         </LinearLayout>
 
+        
+         <LinearLayout 
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+             android:layout_marginLeft="@dimen/twenty"
+             android:gravity="top|left"
+            android:layout_marginRight="@dimen/twenty"
+           
+            android:layout_marginTop="@dimen/twenty"
+            >
+        <CheckBox
+            android:id="@+id/chk_tvViewPrivacyPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             
+            />
+        
         <com.tracmojo.customwidget.CustomTextView
             app:fontName="Roboto-Regular.ttf"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/twenty"
-            android:layout_marginRight="@dimen/twenty"
-            android:layout_marginTop="@dimen/tendp"
+            android:layout_height="40dp"
+             
+         
             android:text="@string/activity_registration_view_privacy_policy"
-            android:textColor="@color/blue_button_default_color"
+            android:textColor="#6E6E6E"
             android:textSize="@dimen/font_small"
             android:id="@+id/activity_registration_tvViewPrivacyPolicy" />
+        
+      </LinearLayout>
+      
+         
+        
 
         <com.tracmojo.customwidget.CustomButton
             app:fontNameForButton="Roboto-Regular.ttf"
@@ -139,7 +161,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/twenty"
             android:layout_marginRight="@dimen/twenty"
-            android:layout_marginTop="@dimen/twenty"
+             
+             android:layout_marginTop="@dimen/tendp"
             android:padding="@dimen/tendp"
             android:textAllCaps="false"
             android:background="@drawable/dark_blue_button_selector"

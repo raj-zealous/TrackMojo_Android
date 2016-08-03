@@ -46,7 +46,7 @@ public class AccountSettingsActivity extends BaseActivity {
 	public RequestQueue mQueue;
 
 	private SharedPreferences prefs;
-	private TextView tvPrimaryEmail;
+	private TextView tvPrimaryEmail,activity_account_tvViewTerms,activity_account_tvViewPrivacyPolicy;
 	private EditText etSecondaryEmail, etFirstName, etLastName, etCurrentPassword, etCountryCode, etNewPassword,
 			etPhoneNumber;
 
@@ -93,7 +93,11 @@ public class AccountSettingsActivity extends BaseActivity {
 
 		linPassWordPart = (LinearLayout) findViewById(R.id.activity_account_settings_linPasswordPart);
 		tvPrimaryEmail = (TextView) findViewById(R.id.activity_account_settings_etPrimaryEmail);
-
+		activity_account_tvViewTerms= (TextView) findViewById(R.id.activity_account_tvViewTerms);
+		activity_account_tvViewPrivacyPolicy= (TextView) findViewById(R.id.activity_account_tvViewPrivacyPolicy);
+		activity_account_tvViewTerms.setOnClickListener(this);
+		activity_account_tvViewPrivacyPolicy.setOnClickListener(this);
+		
 		etSecondaryEmail = (EditText) findViewById(R.id.activity_account_settings_etSecondaryEmail);
 		etFirstName = (EditText) findViewById(R.id.activity_account_settings_etFirstName);
 		etLastName = (EditText) findViewById(R.id.activity_account_settings_etLastName);
@@ -176,12 +180,31 @@ public class AccountSettingsActivity extends BaseActivity {
 			}
 			break;
 
+		case R.id.activity_account_tvViewTerms:
+			goToTermsOfUse(); 
+		break;
+		
+		case R.id.activity_account_tvViewPrivacyPolicy:
+			goToPrivacyPolicy(); 
+			break;
+			
+		
 		default:
 
 			break;
 		}
 	}
 
+	private void goToTermsOfUse() {
+        Intent intent = new Intent(mContext, PrivacyPolicy.class);
+        intent.putExtra("link","http://www.tracmojo.com/terms-of-use/");
+        startActivity(intent);
+    }
+	
+	private void goToPrivacyPolicy() {
+        Intent intent = new Intent(mContext, PrivacyPolicy.class);
+        startActivity(intent);
+    }
 	private void getUserDetail() {
 		VolleyStringRequest request = new VolleyStringRequest(Request.Method.POST, Webservices.GET_USER_DETAIL,
 				getUserDetailSuccessLisner(), errorLisner()) {

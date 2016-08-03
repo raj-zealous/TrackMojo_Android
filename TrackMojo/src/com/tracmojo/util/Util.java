@@ -20,7 +20,9 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
+import android.text.TextPaint;
 import android.text.TextUtils;
+import android.text.style.URLSpan;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -43,8 +45,7 @@ public class Util {
     public static final String TAB_ADD_TRAC = "ADD_TRAC";
     public static final String TAB_EDIT_TRAC = "EDIT_TRAC";
     public static String KEY_isFirstTime = "isfirsttime";
-    
-    
+     
     public static void setIsFirstTimepreference(Context ct, String ud) {
 		// TODO Auto-generated method stub
 

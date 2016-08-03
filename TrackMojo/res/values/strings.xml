@@ -58,6 +58,8 @@
     <string name="activity_registration_confirm_password">Confirm Password</string>
     <string name="activity_registration_phone_number">Phone Number</string>
     <string name="activity_registration_view_privacy_policy">View Privacy Policy</string>
+    <string name="activity_registration_view_Terms">Terms of Use</string>
+    <string name="activity_registration_view_privacy_policy2">Privacy Policy</string>
     <string name="activity_registration_submit">Create an Account</string>
     <string name="activity_registration_enter_user_name">Please enter first name</string>
     <string name="activity_registration_enter_last_name">Please enter last name</string>
@@ -67,6 +69,7 @@
     <string name="activity_registration_enter_phone_number">Please enter phone number</string>
     <string name="activity_registration_enter_country_code">Please enter country code</string>
     <string name="activity_registration_invalid_phone_number">Invalid phone number</string>
+    <string name="activity_registration_check_privacy">Please accept terms of use and privacy policy</string>
     <string name="activity_registration_primary_and_sec_not_same">Please try different email id</string>
     <string name="title_activity_privacy_policy">PrivacyPolicy</string>
     <string name="activity_registration_please_fill_required_detail">Please fill mandatory fields</string>

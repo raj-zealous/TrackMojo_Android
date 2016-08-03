@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
@@ -308,6 +309,41 @@
             android:layout_height="@dimen/twodp"
             android:background="@color/edit_box_back" />
 
+        
+        <LinearLayout 
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+             android:layout_marginTop="@dimen/twenty"
+            >
+            
+            <com.tracmojo.customwidget.CustomTextView
+            app:fontName="Roboto-Regular.ttf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+             android:layout_weight="1"
+         
+         android:gravity="center"
+            android:text="@string/activity_registration_view_Terms"
+            android:textColor="@color/blue_button_default_color"
+            android:textSize="@dimen/font_small"
+            android:id="@+id/activity_account_tvViewTerms" />
+            
+            
+            <com.tracmojo.customwidget.CustomTextView
+            app:fontName="Roboto-Regular.ttf"
+             android:layout_width="0dp"
+            android:layout_height="wrap_content"
+             android:layout_weight="1"
+             
+          android:gravity="center"
+            android:text="@string/activity_registration_view_privacy_policy2"
+            android:textColor="@color/blue_button_default_color"
+            android:textSize="@dimen/font_small"
+            android:id="@+id/activity_account_tvViewPrivacyPolicy" />
+            
+        </LinearLayout>
 
         <Button
             android:id="@+id/activity_account_settings_btnSave"
@@ -316,7 +352,7 @@
             android:layout_marginBottom="@dimen/thirtyfive_dp"
             android:layout_marginLeft="@dimen/twenty"
             android:layout_marginRight="@dimen/twenty"
-            android:layout_marginTop="@dimen/thirtyfive_dp"
+            android:layout_marginTop="@dimen/twenty"
             android:background="@drawable/blue_button_selector"
             android:padding="@dimen/tendp"
             android:text="@string/account_settings_save"

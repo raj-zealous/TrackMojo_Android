@@ -6,12 +6,6 @@ import java.util.Map;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.os.Bundle;
-import android.util.Log;
-import android.webkit.WebView;
-
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
@@ -20,6 +14,15 @@ import com.tracmojo.util.Util;
 import com.tracmojo.webservice.VolleySetup;
 import com.tracmojo.webservice.VolleyStringRequest;
 import com.tracmojo.webservice.Webservices;
+
+import android.app.ProgressDialog;
+import android.content.Context;import android.opengl.Visibility;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
+import android.widget.ProgressBar;
 
 public class PrivacyPolicy extends BaseActivity {
 
@@ -31,18 +34,47 @@ public class PrivacyPolicy extends BaseActivity {
     private WebView wbPrivacyPolicy;
     private ProgressDialog mProgress;
     private RequestQueue mQueue;
-
+    ProgressBar progressBar1;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_privacy_policy);
         mContext = this;
-
+        
+        
         wbPrivacyPolicy = (WebView) findViewById(R.id.activity_privacy_policy_wbPrivacy);
+        progressBar1= (ProgressBar) findViewById(R.id.progressBar1);
         mQueue = VolleySetup.getRequestQueue();
 
-        if(Util.checkConnection(mContext))
-            getPrivacyPolicy();
+        
+        
+        
+        Bundle bundle = getIntent().getExtras();
+        if (bundle!=null) {
+            if(bundle.containsKey("link")) {
+                String  link = bundle.getString("link");
+                
+                if(Util.checkConnection(mContext)){
+                progressBar1.setVisibility(View.VISIBLE);
+                wbPrivacyPolicy.loadUrl(link);
+                
+	                wbPrivacyPolicy.setWebChromeClient(new WebChromeClient() {
+	                    public void onProgressChanged(WebView view, int progress) {
+	                        
+	
+	                       if(progress >= 80)
+	                    	   progressBar1.setVisibility(View.GONE); 
+	                    }
+	                 });
+                }
+                
+            }
+        } else {
+        	if(Util.checkConnection(mContext))
+                getPrivacyPolicy();
+
+        }
+        
     }
 
     private void getPrivacyPolicy() {

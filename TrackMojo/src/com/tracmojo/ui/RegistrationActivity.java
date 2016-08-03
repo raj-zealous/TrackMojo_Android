@@ -12,29 +12,6 @@ import org.brickred.socialauth.android.SocialAuthError;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.IntentSender;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.telephony.TelephonyManager;
-import android.text.Editable;
-import android.text.Selection;
-import android.text.TextUtils;
-import android.text.TextWatcher;
-import android.util.Log;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import com.android.volley.Request.Method;
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
@@ -61,6 +38,38 @@ import com.tracmojo.webservice.VolleySetup;
 import com.tracmojo.webservice.VolleyStringRequest;
 import com.tracmojo.webservice.Webservices;
 
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.IntentSender;
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.Typeface;
+import android.os.Bundle;
+import android.telephony.TelephonyManager;
+import android.text.Editable;
+import android.text.Selection;
+import android.text.SpannableString;
+import android.text.TextPaint;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
+import android.text.style.ForegroundColorSpan;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.TextView.BufferType;
+import android.widget.Toast;
+
 public class RegistrationActivity extends BaseActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
     private static final int PHONE_NUMBER_MIN_LIMIT = 10;
@@ -79,6 +88,7 @@ public class RegistrationActivity extends BaseActivity implements GoogleApiClien
     private static final String DEVICE_ID = "device_id";
 
     private Context mContext;
+    private CheckBox chk_tvViewPrivacyPolicy;
     private TextView tvPrivacyPolicy;
     private EditText etFirstName, etLastName, etEmail, etPassword, etPhoneNumber, etCountryCode;
     private ImageView ivFacebook, ivGooglePlus, ivTwitter;
@@ -292,6 +302,7 @@ public class RegistrationActivity extends BaseActivity implements GoogleApiClien
         profileTracker.stopTracking();
     }
 
+    
     private void initializeComponents() {
 
         etFirstName = (EditText) findViewById(R.id.activity_registration_etFirstName);
@@ -305,10 +316,82 @@ public class RegistrationActivity extends BaseActivity implements GoogleApiClien
         }else if (!TextUtils.isEmpty(GetCountryZipCode())) {
             etCountryCode.setText("+" + GetCountryZipCode());
         }
-
+        chk_tvViewPrivacyPolicy= (CheckBox) findViewById(R.id.chk_tvViewPrivacyPolicy);
         tvPrivacyPolicy = (TextView) findViewById(R.id.activity_registration_tvViewPrivacyPolicy);
-        tvPrivacyPolicy.setOnClickListener(this);
+        //tvPrivacyPolicy.setOnClickListener(this);
+        
+        Typeface myTypeface = Typeface.createFromAsset(getAssets(), "Roboto-Regular.ttf");
+        tvPrivacyPolicy.setTypeface(myTypeface);
+    
+//        
+//        String first = "<font color='#6E6E6E'>I agree to the </font><font color='#0177B5'>Terms of Use</font><font color='#6E6E6E'> and </font><font color='#0177B5'>Privacy Policy</font>";
+//        
+//        tvPrivacyPolicy.setText(Html.fromHtml(first ));
 
+        
+        
+        SpannableString SpanString = new SpannableString(
+                "I agree to the Terms of Use and Privacy Policy");
+
+        ClickableSpan teremsAndCondition = new ClickableSpan() {
+            @Override
+            public void onClick(View textView) {
+
+            	goToTermsOfUse(); 
+
+            }
+            
+            @Override
+            public void updateDrawState(TextPaint ds) {
+            	// TODO Auto-generated method stub
+            	super.updateDrawState(ds);
+            	ds.setUnderlineText(false); 
+            }
+        };
+
+        ClickableSpan privacy = new ClickableSpan() {
+            @Override
+            public void onClick(View textView) {
+
+            	goToPrivacyPolicy();
+
+            }
+            
+            @Override
+            public void updateDrawState(TextPaint ds) {
+            	// TODO Auto-generated method stub
+            	super.updateDrawState(ds);
+            	ds.setUnderlineText(false); 
+            }
+        };
+
+          
+
+        SpanString.setSpan(teremsAndCondition, 15, 27, 0);
+        SpanString.setSpan(privacy, 32, 46, 0);
+        SpanString.setSpan(new ForegroundColorSpan(Color.parseColor("#0177B5")), 15, 27, 0);
+        SpanString.setSpan(new ForegroundColorSpan(Color.parseColor("#0177B5")), 32, 46, 0);
+       
+     
+        tvPrivacyPolicy.setMovementMethod(LinkMovementMethod.getInstance());
+        
+        tvPrivacyPolicy.setText(SpanString, BufferType.SPANNABLE);
+        tvPrivacyPolicy.setSelected(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         ivFacebook = (ImageView) findViewById(R.id.activity_registration_ivFacebook);
         ivGooglePlus = (ImageView) findViewById(R.id.activity_registration_ivGooglePlus);
         ivTwitter = (ImageView) findViewById(R.id.activity_registration_ivTwitter);
@@ -418,9 +501,9 @@ public class RegistrationActivity extends BaseActivity implements GoogleApiClien
         // TODO Auto-generated method stub
         super.onClick(v);
         switch (v.getId()) {
-            case R.id.activity_registration_tvViewPrivacyPolicy:
-                goToPrivacyPolicy();
-                break;
+//            case R.id.activity_registration_tvViewPrivacyPolicy:
+//                goToPrivacyPolicy();
+//                break;
 
             case R.id.activity_registration__btnSubmit:
                 if (Util.isEditTextEmpty(etFirstName)) {
@@ -443,6 +526,8 @@ public class RegistrationActivity extends BaseActivity implements GoogleApiClien
                     Util.showAlertDialog(mContext, getString(R.string.app_name), getString(R.string.activity_registration_enter_phone_number));
                 } else if (etPhoneNumber.getText().toString().length() < PHONE_NUMBER_MIN_LIMIT && !isForSocialLogin) {
                     Util.showAlertDialog(mContext, getString(R.string.app_name), getString(R.string.activity_registration_invalid_phone_number));
+                }  else if (!chk_tvViewPrivacyPolicy.isChecked()) {
+                    Util.showAlertDialog(mContext, getString(R.string.app_name), getString(R.string.activity_registration_check_privacy));
                 } else {
                     if (isForSocialLogin) {
                         if(!Util.isEditTextEmpty(etPhoneNumber)){
@@ -497,7 +582,11 @@ public class RegistrationActivity extends BaseActivity implements GoogleApiClien
         Intent intent = new Intent(mContext, PrivacyPolicy.class);
         startActivity(intent);
     }
-
+    private void goToTermsOfUse() {
+        Intent intent = new Intent(mContext, PrivacyPolicy.class);
+        intent.putExtra("link","http://www.tracmojo.com/terms-of-use/");
+        startActivity(intent);
+    }
     //--- API CALLING
 
     private void registerUser() {
