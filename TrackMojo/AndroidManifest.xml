@@ -76,13 +76,13 @@
             android:name=".ui.RegistrationActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+           
             android:windowSoftInputMode="adjustPan"></activity>
         <activity
             android:name=".ui.PrivacyPolicy"
             android:label="@string/title_activity_privacy_policy"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+           
             android:windowSoftInputMode="adjustPan"></activity>
         <activity
             android:name=".ui.DashboardActivity"

@@ -40,10 +40,14 @@ public class PrivacyPolicy extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_privacy_policy);
         mContext = this;
-        
+        ivLogo.setVisibility(View.GONE);
+		tvHeader.setVisibility(View.VISIBLE);
+		tvLogout.setVisibility(View.GONE);
+		
         
         wbPrivacyPolicy = (WebView) findViewById(R.id.activity_privacy_policy_wbPrivacy);
         progressBar1= (ProgressBar) findViewById(R.id.progressBar1);
+        progressBar1.setVisibility(View.GONE);
         mQueue = VolleySetup.getRequestQueue();
 
         
@@ -53,7 +57,7 @@ public class PrivacyPolicy extends BaseActivity {
         if (bundle!=null) {
             if(bundle.containsKey("link")) {
                 String  link = bundle.getString("link");
-                
+                tvHeader.setText(getString(R.string.txt_terms));
                 if(Util.checkConnection(mContext)){
                 progressBar1.setVisibility(View.VISIBLE);
                 wbPrivacyPolicy.loadUrl(link);
@@ -70,8 +74,12 @@ public class PrivacyPolicy extends BaseActivity {
                 
             }
         } else {
+        	
+        	  tvHeader.setText(getString(R.string.txt_privacy));
+        	  
         	if(Util.checkConnection(mContext))
                 getPrivacyPolicy();
+        	
 
         }
         

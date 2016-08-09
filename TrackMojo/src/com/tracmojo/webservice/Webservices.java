@@ -8,7 +8,8 @@ public class Webservices {
     //private static String SERVER_BASE_URL="http://peerdevelopment.com/apps/tracmojo/web/api/user/";
  
 	
-	 private static String SERVER_BASE_URL="http://54.153.145.178/backend/web/api/user/";
+		private static String SERVER_BASE_URL="http://app.tracmojo.com/backend/web/api/user/";
+	// private static String SERVER_BASE_URL="http://54.153.145.178/backend/web/api/user/";
    // private static String SERVER_BASE_URL="http://demo.zealousys.com:81/backend/web/api/user/";
      
 	 
