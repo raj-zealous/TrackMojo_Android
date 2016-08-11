@@ -6,7 +6,7 @@
     android:background="@android:color/white"
     android:orientation="vertical">
 
-    <com.tracmojo.customwidget.CustomTextView
+    <com.bluewavevision.tracmojo.customwidget.CustomTextView
         android:id="@+id/dialog_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
         android:layout_height="@dimen/twodp"
         android:background="@color/gray_or" />
 
-    <com.tracmojo.customwidget.CustomEditText
+    <com.bluewavevision.tracmojo.customwidget.CustomEditText
         android:id="@+id/fogot_pass_et_email"
         android:layout_width="match_parent"
         android:layout_height="@dimen/hundred_dp"
@@ -105,7 +105,7 @@
         android:paddingTop="@dimen/tendp"
         android:weightSum="2">
 
-        <com.tracmojo.customwidget.CustomButton
+        <com.bluewavevision.tracmojo.customwidget.CustomButton
             android:id="@+id/fogot_pass_btn_cancel"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -118,7 +118,7 @@
             android:textSize="@dimen/font_small"
             app:fontNameForButton="Roboto-Regular.ttf" />
 
-        <com.tracmojo.customwidget.CustomButton
+        <com.bluewavevision.tracmojo.customwidget.CustomButton
             android:id="@+id/fogot_pass_btn_send"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

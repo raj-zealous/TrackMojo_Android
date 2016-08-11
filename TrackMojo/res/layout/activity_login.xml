@@ -22,7 +22,7 @@
             android:layout_marginTop="@dimen/thirtyfive_dp"
             android:src="@drawable/ic_login_logo" />
 
-        <com.tracmojo.customwidget.CustomEditText
+        <com.bluewavevision.tracmojo.customwidget.CustomEditText
             app:fontNameForEditText="Roboto-Regular.ttf"
             android:id="@+id/activity_login_etEmailAddress"
             android:layout_width="match_parent"
@@ -40,7 +40,7 @@
             android:singleLine="true"
             android:textSize="@dimen/font_small" />
 
-        <com.tracmojo.customwidget.CustomEditText
+        <com.bluewavevision.tracmojo.customwidget.CustomEditText
             app:fontNameForEditText="Roboto-Regular.ttf"
             android:id="@+id/activity_login_etPassword"
             android:layout_width="match_parent"
@@ -58,7 +58,7 @@
             android:singleLine="true"
             android:textSize="@dimen/font_small" />
 
-        <com.tracmojo.customwidget.CustomButton
+        <com.bluewavevision.tracmojo.customwidget.CustomButton
             app:fontNameForButton="Roboto-Regular.ttf"
             android:id="@+id/activity_login_btnSubmit"
             android:layout_width="match_parent"
@@ -72,7 +72,7 @@
             android:textColor="@android:color/white"
             android:textSize="@dimen/font_medium" />
 
-        <com.tracmojo.customwidget.CustomTextView
+        <com.bluewavevision.tracmojo.customwidget.CustomTextView
             app:fontName="Roboto-Regular.ttf"
             android:id="@+id/activity_login_tvForgotPassword"
             android:layout_width="wrap_content"
@@ -97,7 +97,7 @@
                 android:layout_weight="0.45"
                 android:background="@color/gray_or" />
 
-            <com.tracmojo.customwidget.CustomTextView
+            <com.bluewavevision.tracmojo.customwidget.CustomTextView
                 app:fontName="Roboto-Regular.ttf"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -115,7 +115,7 @@
 
         </LinearLayout>
 
-        <com.tracmojo.customwidget.CustomButton
+        <com.bluewavevision.tracmojo.customwidget.CustomButton
             app:fontNameForButton="Roboto-Regular.ttf"
             android:id="@+id/activity_login_btnCreateNewAccount"
             android:layout_width="match_parent"
