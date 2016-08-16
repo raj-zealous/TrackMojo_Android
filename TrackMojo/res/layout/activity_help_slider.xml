@@ -10,12 +10,12 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >
 
-        <com.bluewavevision.tracmojo.widget.NestingViewPager
+        <com.tracmojo.widget.NestingViewPager
             android:id="@+id/view_pager"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent" />
 
-        <com.bluewavevision.tracmojo.widget.CirclePageIndicator
+        <com.tracmojo.widget.CirclePageIndicator
             android:id="@+id/indicator"
             android:layout_width="fill_parent"
             android:layout_height="26dp"

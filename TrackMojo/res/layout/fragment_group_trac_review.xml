@@ -115,7 +115,7 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/tendp">
 
-            <com.bluewavevision.tracmojo.customwidget.CustomTextView
+            <com.tracmojo.customwidget.CustomTextView
                 android:id="@+id/fragment_group_trac_review_tvGroupTrac"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -123,7 +123,7 @@
                 android:textColor="@color/regular_text"
                 android:textSize="@dimen/font_small" />
 
-            <com.bluewavevision.tracmojo.customwidget.CustomTextView
+            <com.tracmojo.customwidget.CustomTextView
                 android:id="@+id/fragment_group_trac_review_tvOwner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -144,7 +144,7 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <com.bluewavevision.tracmojo.customwidget.CustomTextView
+                <com.tracmojo.customwidget.CustomTextView
                     android:id="@+id/fragment_group_trac_review_tvParticipantsCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -171,7 +171,7 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <com.bluewavevision.tracmojo.customwidget.CustomTextView
+                <com.tracmojo.customwidget.CustomTextView
                     android:id="@+id/fragment_group_trac_review_tvFollowersCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -202,7 +202,7 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/tendp">
 
-            <com.bluewavevision.tracmojo.customwidget.CustomTextView
+            <com.tracmojo.customwidget.CustomTextView
                 android:id="@+id/fragment_group_trac_review_tvStartedLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -212,7 +212,7 @@
                 android:textColor="@color/regular_text"
                 android:textSize="@dimen/font_small" />
 
-            <com.bluewavevision.tracmojo.customwidget.CustomTextView
+            <com.tracmojo.customwidget.CustomTextView
                 android:id="@+id/fragment_group_trac_review_tvStartedDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -221,7 +221,7 @@
                 android:textColor="@color/list_group_name"
                 android:textSize="@dimen/font_micro" />
 
-            <com.bluewavevision.tracmojo.customwidget.CustomTextView
+            <com.tracmojo.customwidget.CustomTextView
                 android:id="@+id/fragment_group_trac_review_tvFinishLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -231,7 +231,7 @@
                 android:textColor="@color/regular_text"
                 android:textSize="@dimen/font_small" />
 
-            <com.bluewavevision.tracmojo.customwidget.CustomTextView
+            <com.tracmojo.customwidget.CustomTextView
                 android:id="@+id/fragment_group_trac_review_tvFinishDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -260,7 +260,7 @@
                 android:visibility="gone"
                 android:padding="@dimen/tendp">
 
-                <com.bluewavevision.tracmojo.customwidget.CustomTextView
+                <com.tracmojo.customwidget.CustomTextView
                     android:id="@+id/fragment_group_trac_review_tvTracToDateLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -270,7 +270,7 @@
                     android:textColor="@color/regular_text"
                     android:textSize="@dimen/font_small" />
 
-                <com.bluewavevision.tracmojo.customwidget.CustomTextView
+                <com.tracmojo.customwidget.CustomTextView
                     android:id="@+id/fragment_group_trac_review_tvTracToDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -279,7 +279,7 @@
                     android:textColor="@color/list_group_name"
                     android:textSize="@dimen/font_micro" />
 
-                <com.bluewavevision.tracmojo.customwidget.CustomTextView
+                <com.tracmojo.customwidget.CustomTextView
                     android:id="@+id/fragment_group_trac_review_tvNextLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -289,7 +289,7 @@
                     android:textColor="@color/regular_text"
                     android:textSize="@dimen/font_small" />
 
-                <com.bluewavevision.tracmojo.customwidget.CustomTextView
+                <com.tracmojo.customwidget.CustomTextView
                     android:id="@+id/fragment_group_trac_review_tvNext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -314,7 +314,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.bluewavevision.tracmojo.customwidget.CustomTextView
+            <com.tracmojo.customwidget.CustomTextView
                 android:id="@+id/fragment_group_trac_review_tvCommunicationLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -375,7 +375,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.bluewavevision.tracmojo.customwidget.CustomTextView
+            <com.tracmojo.customwidget.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -437,7 +437,7 @@
             android:background="@color/edit_box_back"
             android:visibility="visible">
 
-            <com.bluewavevision.tracmojo.customwidget.CustomTextView
+            <com.tracmojo.customwidget.CustomTextView
                 android:id="@+id/fragment_group_trac_review_tvViewComments"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -456,7 +456,7 @@
                 android:background="@drawable/home_gray_circular_background"
                 android:visibility="visible">
 
-                <com.bluewavevision.tracmojo.customwidget.CustomTextView
+                <com.tracmojo.customwidget.CustomTextView
                     android:id="@+id/fragment_trac_review_tvNotificationCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

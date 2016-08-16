@@ -318,7 +318,7 @@
              android:layout_marginTop="@dimen/twenty"
             >
             
-            <com.bluewavevision.tracmojo.customwidget.CustomTextView
+            <com.tracmojo.customwidget.CustomTextView
             app:fontName="Roboto-Regular.ttf"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -331,7 +331,7 @@
             android:id="@+id/activity_account_tvViewTerms" />
             
             
-            <com.bluewavevision.tracmojo.customwidget.CustomTextView
+            <com.tracmojo.customwidget.CustomTextView
             app:fontName="Roboto-Regular.ttf"
              android:layout_width="0dp"
             android:layout_height="wrap_content"

@@ -16,7 +16,7 @@
         android:layout_toLeftOf="@+id/row_edit_list_item_linManageOptions"
         android:orientation="vertical">
 
-        <com.bluewavevision.tracmojo.customwidget.CustomTextView
+        <com.tracmojo.customwidget.CustomTextView
             android:id="@+id/row_edit_list_item_tvGroupName"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
             android:text="sd"
             app:fontName="Roboto-Regular.ttf" />
 
-        <com.bluewavevision.tracmojo.customwidget.CustomTextView
+        <com.tracmojo.customwidget.CustomTextView
             android:id="@+id/row_edit_list_item_tvGoal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

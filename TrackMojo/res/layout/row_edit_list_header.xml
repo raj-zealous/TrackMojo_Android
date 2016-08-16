@@ -7,7 +7,7 @@
     android:background="@drawable/ic_home_list_header"
     >
 
-    <com.bluewavevision.tracmojo.customwidget.CustomTextView
+    <com.tracmojo.customwidget.CustomTextView
         app:fontName="Roboto-Regular.ttf"
         android:id="@+id/row_edit_list_header_tvHeader"
         android:layout_width="wrap_content"

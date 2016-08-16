@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context="com.bluewavevision.tracmojo.ui.PersonalTracAddActivity">
+    tools:context="com.tracmojo.ui.PersonalTracAddActivity">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -100,7 +100,7 @@
                         android:background="@drawable/gray_border_circular_background"
                         android:padding="@dimen/threedp">
 
-                        <com.bluewavevision.tracmojo.customwidget.CircularDrawable
+                        <com.tracmojo.customwidget.CircularDrawable
                             android:id="@+id/activity_personal_trac_edit_cdTracOne"
                             android:layout_width="@dimen/thirtyfive_dp"
                             android:layout_height="@dimen/thritysp"
@@ -137,7 +137,7 @@
                         android:padding="@dimen/threedp"
                         android:background="@drawable/gray_border_circular_background">
 
-                        <com.bluewavevision.tracmojo.customwidget.CircularDrawable
+                        <com.tracmojo.customwidget.CircularDrawable
                             android:id="@+id/activity_personal_trac_edit_cdTracTwo"
                             android:layout_width="@dimen/thirtyfive_dp"
                             android:layout_height="@dimen/thritysp"
@@ -184,7 +184,7 @@
                         android:background="@drawable/gray_border_circular_background"
                         android:padding="@dimen/threedp">
 
-                        <com.bluewavevision.tracmojo.customwidget.CircularDrawable
+                        <com.tracmojo.customwidget.CircularDrawable
                             android:id="@+id/activity_personal_trac_edit_cdTracThree"
                             android:layout_width="@dimen/thirtyfive_dp"
                             android:layout_height="@dimen/thritysp"
@@ -221,7 +221,7 @@
                         android:padding="@dimen/threedp"
                         android:background="@drawable/gray_border_circular_background">
 
-                        <com.bluewavevision.tracmojo.customwidget.CircularDrawable
+                        <com.tracmojo.customwidget.CircularDrawable
                             android:id="@+id/activity_personal_trac_edit_cdTracFour"
                             android:layout_width="@dimen/thirtyfive_dp"
                             android:layout_height="@dimen/thritysp"
@@ -269,7 +269,7 @@
                         android:background="@drawable/gray_border_circular_background"
                         android:padding="@dimen/threedp">
 
-                        <com.bluewavevision.tracmojo.customwidget.CircularDrawable
+                        <com.tracmojo.customwidget.CircularDrawable
                             android:id="@+id/activity_personal_trac_edit_cdTracFive"
                             android:layout_width="@dimen/thirtyfive_dp"
                             android:layout_height="@dimen/thritysp"
