@@ -891,6 +891,16 @@ public class EditTracFragment extends BaseFragment implements OnClickListener, T
                 params.put("trac_id", "" + tracid);
                 params.put("invitation_type", invitationType);
                 params.put("action_chosen", "" + requestStatus);
+                
+                
+                for (Map.Entry<String,String> entry : params.entrySet()) {
+                    String key = entry.getKey();
+                    String value = entry.getValue();
+                    // do stuff
+
+                    Log.i("EditTracFragment","=====>"+key+":"+value);
+                }
+
 
                 return params;
             }

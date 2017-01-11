@@ -3,14 +3,10 @@ package com.tracmojo.webservice;
 public class Webservices {
 	//Server links..
 
-    //private static String SERVER_BASE_URL="http://192.168.1.101/tracmojo/web/api/user/";
-    //private static String SERVER_BASE_URL="http://192.168.1.100/apps/tracmojo/web/api/user/";
-    //private static String SERVER_BASE_URL="http://peerdevelopment.com/apps/tracmojo/web/api/user/";
  
-	
-		private static String SERVER_BASE_URL="http://app.tracmojo.com/backend/web/api/user/";
-	// private static String SERVER_BASE_URL="http://54.153.145.178/backend/web/api/user/";
-   // private static String SERVER_BASE_URL="http://demo.zealousys.com:81/backend/web/api/user/";
+	//	private static String SERVER_BASE_URL="http://app.tracmojo.com/backend/web/api/user/";
+	private static String SERVER_BASE_URL="http://54.153.145.178/backend/web/api/user/";
+    //private static String SERVER_BASE_URL="http://opensource.zealousys.com/backend/web/api/user/";
      
 	 
 	//api links

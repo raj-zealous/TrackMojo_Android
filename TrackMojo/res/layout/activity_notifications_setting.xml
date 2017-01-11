@@ -138,7 +138,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
+                 
+                android:layout_centerVertical="true"
                 android:layout_toLeftOf="@+id/activity_notification_settings_tbLastChanceToTracMojo"
                 android:text="@string/notification_settings_last_chance_to_tracmojo"
                 android:textColor="@color/regular_text"

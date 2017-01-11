@@ -226,7 +226,7 @@ public class NotificationSettingsActivity extends BaseActivity{
                 isTimeToTracMojoChecked=false;
             }
 
-            String remindToTracMojo = jsonSettings.getString("noti_trac_before_hour");
+            String remindToTracMojo = jsonSettings.getString("noti_trac_after_hour");
             if (remindToTracMojo.equalsIgnoreCase("y")){
                 tbReminderToTracMojo.setChecked(true);
                 isRemindToTracMojoChecked = true;
@@ -235,7 +235,7 @@ public class NotificationSettingsActivity extends BaseActivity{
                 isRemindToTracMojoChecked = false;
             }
 
-            String lastChanceToRate = jsonSettings.getString("noti_trac_after_hour");
+            String lastChanceToRate = jsonSettings.getString("noti_trac_before_hour");
             if (lastChanceToRate.equalsIgnoreCase("y")){
                 tbLastChanceToTracMojo.setChecked(true);
                 isLastChanceToTracMojoChecked = true;
@@ -341,10 +341,10 @@ public class NotificationSettingsActivity extends BaseActivity{
             case R.id.activity_notification_settings_tbItsRemindToTracMojo:
                 if(Util.checkConnection(mContext)){
                     if(isRemindToTracMojoChecked){
-                        setNotificationSettings("noti_trac_before_hour","n");
+                        setNotificationSettings("noti_trac_after_hour","n");
                         isRemindToTracMojoChecked = false;
                     } else {
-                        setNotificationSettings("noti_trac_before_hour","y");
+                        setNotificationSettings("noti_trac_after_hour","y");
                         isRemindToTracMojoChecked = true;
                     }
                 }
@@ -353,10 +353,10 @@ public class NotificationSettingsActivity extends BaseActivity{
             case R.id.activity_notification_settings_tbLastChanceToTracMojo:
                 if(Util.checkConnection(mContext)){
                     if(isLastChanceToTracMojoChecked){
-                        setNotificationSettings("noti_trac_after_hour","n");
+                        setNotificationSettings("noti_trac_before_hour","n");
                         isLastChanceToTracMojoChecked = false;
                     } else {
-                        setNotificationSettings("noti_trac_after_hour","y");
+                        setNotificationSettings("noti_trac_before_hour","y");
                         isLastChanceToTracMojoChecked = true;
                     }
                 }
