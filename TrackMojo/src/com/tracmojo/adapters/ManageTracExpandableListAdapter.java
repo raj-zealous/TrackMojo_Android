@@ -12,6 +12,7 @@ import com.tracmojo.ui.GroupTracAddActivity;
 import com.tracmojo.ui.GroupTracEditActivity;
 import com.tracmojo.ui.PersonalTracAddActivity;
 import com.tracmojo.ui.PersonalTracEditActivity;
+import com.tracmojo.ui.PrivacyPolicy;
 import com.tracmojo.util.Util;
 
 import android.app.AlertDialog;
@@ -19,6 +20,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.text.Html;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -69,7 +71,8 @@ public class ManageTracExpandableListAdapter extends BaseExpandableListAdapter {
     }
 
     public static class ViewHolder {
-        TextView tvGoal, tvGroupName;
+    	LinearLayout llClick;
+        TextView tvGoal, tvGroupName,tvBusinessName;
         ImageView ivEdit,ivDelete;
         ToggleButton tbFollow;
         LinearLayout linManageTrac;
@@ -90,6 +93,8 @@ public class ManageTracExpandableListAdapter extends BaseExpandableListAdapter {
             convertView = infalInflater.inflate(R.layout.row_edit_list_item, null);
 
             holder = new ViewHolder();
+            holder.llClick = (LinearLayout) convertView.findViewById(R.id.llClick);
+            holder.tvBusinessName = (TextView) convertView.findViewById(R.id.row_home_list_item_business_name);
             holder.tvGoal = (TextView) convertView.findViewById(R.id.row_edit_list_item_tvGoal);
             holder.tvGroupName = (TextView) convertView.findViewById(R.id.row_edit_list_item_tvGroupName);
             holder.ivDelete = (ImageView) convertView.findViewById(R.id.row_edit_list_item_ivDelete);
@@ -154,22 +159,89 @@ public class ManageTracExpandableListAdapter extends BaseExpandableListAdapter {
             }
         }
 
+        
+        
+        
+        if (!TextUtils.isEmpty(trac.getBusiness_name()))
+		{
+			
+			String text= "<font color=#ed7070>"+trac.getBusiness_name()+"</font>";
+			if(trac.getOwnerName().trim().length()>0)
+			text= text+"<font color=#b1b1b1> - "+trac.getOwnerName()+"</font>";
+			holder.tvBusinessName.setText(Html.fromHtml(text));
+			holder.tvBusinessName.setVisibility(View.VISIBLE);
+		}
+		else
+		{
+			holder.tvBusinessName.setVisibility(View.GONE);
+		}
+        
+        
+holder.llClick.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+				if(trac.getWebsite_link().trim().length()>0)
+				{
+					 Intent intent = new Intent(mContext, PrivacyPolicy.class);
+					 intent.putExtra("link", trac.getWebsite_link());
+					 intent.putExtra("header", "Website");
+					 mContext.startActivity(intent);
+				}
+				
+			}
+		});
+        
+        
+        
+        
+        
+        
+        
         if (!TextUtils.isEmpty(trac.getGoal()))
             holder.tvGoal.setText(trac.getGoal());
 
         if (!TextUtils.isEmpty(trac.getGroupName())) {
-            holder.tvGroupName.setVisibility(View.VISIBLE);
-            holder.tvGroupName.setText(trac.getGroupName());
-            if(groupPosition==2){
-                holder.tvGroupName.append(" - " + trac.getOwnerName());
-            }
-        } else {
-            if(groupPosition==2){
-                holder.tvGroupName.setText(trac.getOwnerName());
-            }else {
-                holder.tvGroupName.setVisibility(View.GONE);
-            }
-        }
+			holder.tvGroupName.setVisibility(View.VISIBLE);
+			holder.tvGroupName.setText(trac.getGroupName());
+			if (groupPosition == 2) {
+				holder.tvGroupName.append(" - " + trac.getOwnerName());
+				holder.tvGroupName.setVisibility(View.VISIBLE);
+			}
+		} else {
+			if (groupPosition == 2) {
+				
+				if(TextUtils.isEmpty(trac.getBusiness_name()))
+				{
+				holder.tvGroupName.setText(trac.getOwnerName());
+				holder.tvGroupName.setVisibility(View.VISIBLE);
+				}
+				else
+				{
+					holder.tvGroupName.setVisibility(View.GONE);
+				}
+			} else {
+				holder.tvGroupName.setVisibility(View.GONE);
+			}
+		}
+
+        
+//        
+//        if (!TextUtils.isEmpty(trac.getGroupName())) {
+//            holder.tvGroupName.setVisibility(View.VISIBLE);
+//            holder.tvGroupName.setText(trac.getGroupName());
+//            if(groupPosition==2){
+//                holder.tvGroupName.append(" - " + trac.getOwnerName());
+//            }
+//        } else {
+//            if(groupPosition==2){
+//                holder.tvGroupName.setText(trac.getOwnerName());
+//            }else {
+//                holder.tvGroupName.setVisibility(View.GONE);
+//            }
+//        }
 
         /*if (!TextUtils.isEmpty(trac.getGroupName()) && !TextUtils.isEmpty(trac.getGroupType())) {
             holder.tvGroupName.append(" - " + trac.getGroupType());

@@ -53,7 +53,7 @@ public class EditTracFragment extends BaseFragment implements OnClickListener, T
 
     private View llLayout;
     private RelativeLayout relAddPersonalTrac;
-    private LinearLayout llCustomAddTracDialog;
+    private RelativeLayout llCustomAddTracDialog;
     private TextView tvNoTracFound;
     private ManageTracExpandableListAdapter listAdapter;
     private ExpandableListView expListView;
@@ -103,7 +103,7 @@ public class EditTracFragment extends BaseFragment implements OnClickListener, T
             expListView = (ExpandableListView) llLayout.findViewById(R.id.lvExp);
             expListView.setGroupIndicator(null);
 
-            llCustomAddTracDialog = (LinearLayout) llLayout.findViewById(R.id.fragment_home_llCustomAddDialog);
+            llCustomAddTracDialog = (RelativeLayout) llLayout.findViewById(R.id.fragment_home_llCustomAddDialog);
             relAddPersonalTrac = (RelativeLayout) llCustomAddTracDialog.findViewById(R.id.custom_add_trac_dialog_relAddPersonalTrac);
             relAddPersonalTrac.setOnClickListener(this);
 
@@ -634,6 +634,10 @@ public class EditTracFragment extends BaseFragment implements OnClickListener, T
                 for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject jsonObjectChildTrac = jsonArray.getJSONObject(i);
                     int id = jsonObjectChildTrac.getInt("id");
+                    
+                    String business_name = "" + jsonObjectChildTrac.optString("business_name");
+                    String website_link = "" + jsonObjectChildTrac.optString("website_link");
+                    
                     String goal = jsonObjectChildTrac.getString("goal");
                     String groupName = "" + jsonObjectChildTrac.optString("name");
                     String myTrac = jsonObjectChildTrac.getString("my_trac");
@@ -679,6 +683,8 @@ public class EditTracFragment extends BaseFragment implements OnClickListener, T
                     trac.setGroupType(groupType);
                     trac.setMyTrac(isMyTrac);
                     trac.setRate(rate);
+                    trac.setBusiness_name(business_name);
+                    trac.setWebsite_link(website_link);
                     trac.setNotificationOn(isNotiOn);
                     trac.setRateOption(rateOption);
                     trac.setRateFrequency(rateFrequency);

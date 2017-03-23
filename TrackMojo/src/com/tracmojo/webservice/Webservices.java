@@ -5,8 +5,8 @@ public class Webservices {
 
  
 	//	private static String SERVER_BASE_URL="http://app.tracmojo.com/backend/web/api/user/";
-	private static String SERVER_BASE_URL="http://54.153.145.178/backend/web/api/user/";
-    //private static String SERVER_BASE_URL="http://opensource.zealousys.com/backend/web/api/user/";
+	//private static String SERVER_BASE_URL="http://54.153.145.178/backend/web/api/user/";
+    private static String SERVER_BASE_URL="http://opensource.zealousys.com/backend/web/api/user/";
      
 	 
 	//api links
@@ -41,5 +41,9 @@ public class Webservices {
     public static String EMAIL_COMMENT_LIST = SERVER_BASE_URL +  "sendcomments";
     public static String ADD_FOLLOWERS = SERVER_BASE_URL +  "addfollowers";
     public static String ADD_PARTICIPANTS = SERVER_BASE_URL +  "addparticipants";
+    public static String GET_CMS_DETAILS = SERVER_BASE_URL +  "getcmsdetails";
+    public static String INVITE_API = SERVER_BASE_URL +  "confirmsponsoredtrac";
+    public static String INVITE_OK_API = SERVER_BASE_URL +  "addsponsoredtrac";
+    
 
 }

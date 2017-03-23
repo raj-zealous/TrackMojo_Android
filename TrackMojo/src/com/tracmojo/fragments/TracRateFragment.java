@@ -42,7 +42,7 @@ public class TracRateFragment extends BaseFragment implements OnClickListener {
     //private ImageView adCustomCanvas;
     private ImageView cdFirstTrac, cdSecondTrac, cdThirdTrac, cdFourthTrac, cdFifthTrac, cdSelectedTrac;
     private TextView tvTracOption1, tvTracOption2, tvTracOption3, tvTracOption4, tvTracOption5;
-    private TextView tvGroupName,tvTracName,tvFrequency,tvLastRated,tvDone,tvComment;
+    private TextView tvGroupName,tvTracName,tvFrequency,tvLastRated,tvDone,tvComment,tvBusinessName;
 
     private TracMojoApplication application;
     private Trac mTrac;
@@ -101,6 +101,8 @@ public class TracRateFragment extends BaseFragment implements OnClickListener {
     }
 
     private void initializeComponents() {
+    	
+    	
         cdFirstTrac = (ImageView) llLayout.findViewById(R.id.fragment_trac_rate_cdTracOne);
         cdSecondTrac = (ImageView) llLayout.findViewById(R.id.fragment_trac_rate_cdTracSecond);
         cdThirdTrac = (ImageView) llLayout.findViewById(R.id.fragment_trac_rate_cdTracThree);
@@ -114,6 +116,8 @@ public class TracRateFragment extends BaseFragment implements OnClickListener {
         cdFourthTrac.setOnClickListener(this);
         cdFifthTrac.setOnClickListener(this);
 
+        
+        tvBusinessName = (TextView) llLayout.findViewById(R.id.row_home_list_item_business_name);
         tvTracOption1 = (TextView) llLayout.findViewById(R.id.fragment_trac_rate_tvTracOption1);
         tvTracOption2 = (TextView) llLayout.findViewById(R.id.fragment_trac_rate_tvTracOption2);
         tvTracOption3 = (TextView) llLayout.findViewById(R.id.fragment_trac_rate_tvTracOption3);
@@ -158,6 +162,22 @@ public class TracRateFragment extends BaseFragment implements OnClickListener {
 
     private void setOtherTracFields(){
         if(mTrac!=null){
+        	
+        	
+        	
+        	
+        	
+
+            if(!TextUtils.isEmpty(mTrac.getBusiness_name())){
+            	tvBusinessName.setText(mTrac.getBusiness_name());
+            	tvBusinessName.setVisibility(View.VISIBLE);
+            }else {
+            	tvBusinessName.setVisibility(View.GONE);
+            }
+
+        	
+        	
+        	
             if(!TextUtils.isEmpty(mTrac.getGroupName())){
                 tvGroupName.setText(mTrac.getGroupName());
             }else {

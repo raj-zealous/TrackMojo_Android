@@ -67,6 +67,7 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.listener.OnChartGestureListener;
 import com.tracmojo.R;
+import com.tracmojo.customwidget.CustomTextView;
 import com.tracmojo.database.RemDBAdapter;
 import com.tracmojo.model.Follower;
 import com.tracmojo.model.GraphModel;
@@ -124,8 +125,9 @@ public class PersonalTracReviewFragment extends BaseFragment implements OnClickL
 
     private String followersIds = "";
     private String personalFollowersCount = "";
-    private String goal = "";
+    private String goal = "",business_name="";
 
+    CustomTextView txt_business_name;
     private ArrayList<Follower> listFollowers = new ArrayList<Follower>();
 
     @Override
@@ -280,7 +282,8 @@ public class PersonalTracReviewFragment extends BaseFragment implements OnClickL
         tvCommentCount = (TextView) llLayout.findViewById(R.id.fragment_trac_review_tvNotificationCount);
 
         relCaptureGraph = (LinearLayout) llLayout.findViewById(R.id.fragment_trac_review_relCaptureGraph);
-
+        
+        txt_business_name = (CustomTextView) llLayout.findViewById(R.id.row_home_list_item_business_name);
         tvTracName = (TextView) llLayout.findViewById(R.id.fragment_trac_review_tvTracName);
         tvTracFrequency = (TextView) llLayout.findViewById(R.id.fragment_trac_review_tvFrequency);
         tvPersonalFollowers = (TextView) llLayout.findViewById(R.id.fragment_trac_review_tvPersonalFollowers);
@@ -506,6 +509,17 @@ public class PersonalTracReviewFragment extends BaseFragment implements OnClickL
         if (jsonTrac != null) {
 
             goal = "" + jsonTrac.getString("goal");
+            
+            business_name= "" + jsonTrac.getString("business_name");
+            if(!TextUtils.isEmpty(business_name)){
+            	txt_business_name.setText(business_name);
+            	txt_business_name.setVisibility(View.VISIBLE);
+            }
+            else
+            {
+            	txt_business_name.setVisibility(View.GONE);
+            }
+            
             if (!TextUtils.isEmpty(goal)) {
                 tvTracName.setText(goal);
             } else {

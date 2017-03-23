@@ -32,11 +32,26 @@
             android:layout_marginRight="@dimen/tendp"
             android:background="@drawable/edit_box_background_solid"
             android:padding="@dimen/tendp">
+            
+            
+            
+            <TextView
+                android:id="@+id/row_home_list_item_business_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="sdfas"
+                android:visibility="gone"
+                android:textColor="#ed7070"
+                android:textSize="@dimen/font_micro" />
+            
             <TextView
                 android:id="@+id/fragment_trac_rate_tvGroupName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/fragment_trac_rate_tvTracRate"
+                
                 android:ellipsize="end"
                 android:singleLine="true"
                 android:text="sdfas"

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_height"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_box_background2"
+        android:gravity="center|top"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rlPager"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/llMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                  	
+                    android:orientation="vertical"
+                    android:layout_gravity="top"
+                    android:visibility="visible" >
+
+                    <com.tracmojo.customwidget.CustomTextView
+                        android:id="@+id/txtMessage2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:padding="8dp"
+                        android:text="Help us deliver better offers for you by telling us how much you like this offer."
+                        android:textColor="@color/blue_button_default_color"
+                        android:textSize="@dimen/font_small" />
+
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:padding="3dp"
+        android:src="@drawable/ic_close" />
+
+</RelativeLayout>

@@ -1,77 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/dialog_width"
     android:layout_height="match_parent"
-    android:gravity="bottom"
-    android:clickable="true"
     android:background="@color/add_trac_dialog_tranceparncy"
-    android:paddingBottom="@dimen/twenty"
+    android:clickable="true"
+    android:gravity="bottom"
     android:orientation="horizontal"
-    android:weightSum="2">
+    android:paddingBottom="@dimen/twenty"
+    android:weightSum="2"
+    tools:ignore="RtlHardcoded" >
 
-    <LinearLayout
-        android:layout_width="0dp"
+    <com.tracmojo.customwidget.CustomTextView
+        android:id="@+id/tvInfo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/tendp"
+        android:gravity="center"
+        android:background="@drawable/add_trac_dialog_circular_background"
+        android:text="i"
+         app:fontName="Roboto-Regular.ttf"
+          android:textSize="@dimen/font_xlarge"
+        android:textColor="#ffffff" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:layout_centerVertical="true" >
 
-        <RelativeLayout
-            android:id="@+id/custom_add_trac_dialog_relAddPersonalTrac"
-            android:layout_width="@dimen/eighty_dp"
-            android:layout_height="@dimen/eighty_dp"
-            android:background="@drawable/add_trac_dialog_circular_background">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:padding="@dimen/tendp"
-                android:src="@drawable/ic_home_add_personal_trac"
-                 />
-
-        </RelativeLayout>
-
-        <TextView
+        <com.tracmojo.customwidget.CustomTextView
+            android:id="@+id/lblInviteCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/tendp"
-            android:text="@string/activity_dashboard_home_add_personal_trac"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/font_small" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/fivedp"
+            android:text="@string/enter_an_invite_code"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/font_small"
+            app:fontName="Roboto-Regular.ttf" />
 
         <RelativeLayout
-            android:id="@+id/custom_add_trac_dialog_relAddGroupTrac"
-            android:layout_width="@dimen/eighty_dp"
-            android:layout_height="@dimen/eighty_dp"
-            android:background="@drawable/add_trac_dialog_circular_background">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:padding="@dimen/tendp"
-                android:src="@drawable/ic_home_add_group_trac" />
-
-        </RelativeLayout>
-
-        <TextView
+            android:id="@+id/tmp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/tendp"
-            android:text="@string/activity_dashboard_home_add_group_trac"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/font_small" />
+            android:layout_below="@+id/lblInviteCode"
+            android:layout_marginBottom="@dimen/twenty"
+            android:layout_marginLeft="@dimen/thirtyfive_dp"
+            android:layout_marginRight="@dimen/thirtyfive_dp"
+            android:layout_marginTop="@dimen/twenty" >
 
+            <com.tracmojo.customwidget.CustomButton
+                android:id="@+id/btnGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/blue_button_selector"
+                android:padding="@dimen/fivedp"
+                android:text="@string/activity_login_submit"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_medium"
+                app:fontNameForButton="Roboto-Regular.ttf" />
+
+            <com.tracmojo.customwidget.CustomEditText
+                android:id="@+id/edtInviteCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/twelve_dp"
+                android:layout_toLeftOf="@+id/btnGo"
+                android:background="@drawable/edit_box_background2"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/tendp"
+                android:singleLine="true"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_small"
+                app:fontNameForEditText="Roboto-Regular.ttf" />
+        </RelativeLayout>
+
+        <com.tracmojo.customwidget.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tmp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/btmpading"
+            android:text="Or"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/font_small"
+            app:fontName="Roboto-Regular.ttf"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/dialog_width"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/twenty"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/custom_add_trac_dialog_relAddPersonalTrac"
+                android:layout_width="@dimen/eighty_dp"
+                android:layout_height="@dimen/eighty_dp"
+                android:background="@drawable/add_trac_dialog_circular_background" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/tendp"
+                    android:src="@drawable/ic_home_add_personal_trac" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tendp"
+                android:text="@string/activity_dashboard_home_add_personal_trac2"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/custom_add_trac_dialog_relAddGroupTrac"
+                android:layout_width="@dimen/eighty_dp"
+                android:layout_height="@dimen/eighty_dp"
+                android:background="@drawable/add_trac_dialog_circular_background" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/tendp"
+                    android:src="@drawable/ic_home_add_group_trac" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tendp"
+                android:text="@string/activity_dashboard_home_add_group_trac2"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

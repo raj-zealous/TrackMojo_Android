@@ -96,7 +96,9 @@
     <string name="activity_dashboard_home_first_timer_message">How to use this app? please tap on help icon.</string>
     <string name="activity_dashboard_home_add_personal_trac">Personal trac</string>
     <string name="activity_dashboard_home_add_group_trac">Group trac</string>
-
+        <string name="activity_dashboard_home_add_group_trac2">Create Group Tracs</string>
+     <string name="enter_an_invite_code">Enter an invite code</string>
+<string name="activity_dashboard_home_add_personal_trac2">Create Personal Tracs</string>
     <!-- Add Personal Trac -->
     <string name="activity_add_personal_trac_add_a_per_trac">add a personal trac...</string>
     <string name="activity_add_personal_trac_enter_your_trac_here">Enter your trac here</string>

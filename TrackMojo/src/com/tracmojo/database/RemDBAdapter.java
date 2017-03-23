@@ -131,6 +131,9 @@ public class RemDBAdapter {
         Trac trac = new Trac();
         int id = jsonTrac.getInt("id");
         String goal = "" + jsonTrac.getString("goal");
+        String business_name = "" + jsonTrac.optString("business_name");
+        String website_link = "" + jsonTrac.optString("website_link");
+        
         if(TextUtils.isEmpty(goal)){
             goal = "" + jsonTrac.getString("idea_id_name");
         }
@@ -175,6 +178,8 @@ public class RemDBAdapter {
         trac.setGoal(goal);
         trac.setGroupName(groupName);
         trac.setGroupType(groupType);
+        trac.setBusiness_name(business_name);
+        trac.setWebsite_link(website_link);
         trac.setMyTrac(isMyTrac);
         trac.setRate(rate);
         trac.setNotificationOn(isNotiOn);

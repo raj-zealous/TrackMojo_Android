@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_height"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_box_background2"
+        android:gravity="center|top"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llButton"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/llMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:orientation="vertical"
+                android:visibility="visible" >
+                
+                
+                
+
+                <com.tracmojo.customwidget.CustomTextView
+                    android:id="@+id/txtMessage2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center|left"
+                    android:lineSpacingMultiplier="1.2"
+                    android:padding="8dp"
+                     android:textColor="@color/blue_button_default_color"
+                    android:textSize="@dimen/font_small" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/llButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+
+            <com.tracmojo.customwidget.CustomButton
+                android:id="@+id/btnOK"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/fifteen"
+                android:background="@drawable/blue_button_selector"
+                android:padding="@dimen/fivedp"
+                android:text="Ok"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_medium"
+                app:fontNameForButton="Roboto-Regular.ttf" />
+
+            <com.tracmojo.customwidget.CustomButton
+                android:id="@+id/btnExit"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/fifteen"
+                android:background="@drawable/blue_button_selector"
+                android:padding="@dimen/fivedp"
+                android:text="Exit"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_medium"
+                app:fontNameForButton="Roboto-Regular.ttf" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

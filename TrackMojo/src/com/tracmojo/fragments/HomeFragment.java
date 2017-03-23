@@ -54,7 +54,7 @@ public class HomeFragment extends BaseFragment implements OnClickListener, TracR
 
     private View llLayout;
     private RelativeLayout relAddPersonalTrac;
-    private LinearLayout llCustomAddTracDialog;
+    private RelativeLayout llCustomAddTracDialog;
     private TextView tvNoTracFound;
     private HomeExpandableListAdapter listAdapter;
     private ExpandableListView expListView;
@@ -98,7 +98,7 @@ public class HomeFragment extends BaseFragment implements OnClickListener, TracR
             expListView = (ExpandableListView) llLayout.findViewById(R.id.lvExp);
             expListView.setGroupIndicator(null);
 
-            llCustomAddTracDialog = (LinearLayout) llLayout.findViewById(R.id.fragment_home_llCustomAddDialog);
+            llCustomAddTracDialog = (RelativeLayout) llLayout.findViewById(R.id.fragment_home_llCustomAddDialog);
             relAddPersonalTrac = (RelativeLayout) llCustomAddTracDialog.findViewById(R.id.custom_add_trac_dialog_relAddPersonalTrac);
             relAddPersonalTrac.setOnClickListener(this);
 
@@ -633,6 +633,9 @@ public class HomeFragment extends BaseFragment implements OnClickListener, TracR
                     JSONObject jsonObjectChildTrac = jsonArray.getJSONObject(i);
                     int id = jsonObjectChildTrac.getInt("id");
                     String goal = jsonObjectChildTrac.getString("goal");
+                    String business_name = "" + jsonObjectChildTrac.optString("business_name");
+                    String website_link = "" + jsonObjectChildTrac.optString("website_link");
+                    
                     String groupName = "" + jsonObjectChildTrac.optString("name");
                     String myTrac = jsonObjectChildTrac.getString("my_trac");
                     String groupType = jsonObjectChildTrac.optString("group_type");
@@ -674,10 +677,13 @@ public class HomeFragment extends BaseFragment implements OnClickListener, TracR
                     Trac trac = new Trac();
                     trac.setId(id);
                     trac.setGoal(goal);
+                    
                     trac.setGroupName(groupName);
                     trac.setGroupType(groupType);
                     trac.setMyTrac(isMyTrac);
                     trac.setRate(rate);
+                    trac.setBusiness_name(business_name);
+                    trac.setWebsite_link(website_link);
                     trac.setNotificationOn(isNotiOn);
                     trac.setRateOption(rateOption);
                     trac.setRateFrequency(rateFrequency);

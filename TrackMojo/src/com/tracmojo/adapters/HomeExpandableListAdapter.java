@@ -12,12 +12,15 @@ import com.tracmojo.fragments.PersonalTracReviewFragment;
 import com.tracmojo.fragments.TracRateFragment;
 import com.tracmojo.model.Trac;
 import com.tracmojo.ui.DashboardActivity;
+import com.tracmojo.ui.PrivacyPolicy;
 import com.tracmojo.util.OnSwipeTouchListener;
 import com.tracmojo.util.Util;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.Html;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -28,6 +31,7 @@ import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class HomeExpandableListAdapter extends BaseExpandableListAdapter {
@@ -69,7 +73,8 @@ public class HomeExpandableListAdapter extends BaseExpandableListAdapter {
 	}
 
 	public static class ViewHolder {
-		TextView tvGoal, tvGroupName;
+		LinearLayout llClick;
+		TextView tvGoal, tvGroupName,tvBusinessName;
 		ImageView ivRate;
 		// CircularDrawable circularDrawable;
 	}
@@ -91,7 +96,9 @@ public class HomeExpandableListAdapter extends BaseExpandableListAdapter {
 			holder.ivRate = (ImageView) convertView.findViewById(R.id.row_home_list_item_ivRate);
 			holder.tvGoal = (TextView) convertView.findViewById(R.id.row_home_list_item_tvGoal);
 			holder.tvGroupName = (TextView) convertView.findViewById(R.id.row_home_list_item_tvGroupName);
-
+			holder.tvBusinessName = (TextView) convertView.findViewById(R.id.row_home_list_item_business_name);
+			holder.llClick = (LinearLayout) convertView.findViewById(R.id.llClick);
+			
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
@@ -157,24 +164,78 @@ public class HomeExpandableListAdapter extends BaseExpandableListAdapter {
 			holder.ivRate.setImageResource(R.drawable.ic_custom_rate_zero);
 			break;
 		}
+		
+		
+		
+	 
+		
+		if (!TextUtils.isEmpty(trac.getBusiness_name()))
+		{
+			
+			String text= "<font color=#ed7070>"+trac.getBusiness_name()+"</font>";
+			if(trac.getOwnerName().trim().length()>0)
+			text= text+"<font color=#b1b1b1> - "+trac.getOwnerName()+"</font>";
+			holder.tvBusinessName.setText(Html.fromHtml(text));
+			holder.tvBusinessName.setVisibility(View.VISIBLE);
+		}
+		else
+		{
+			holder.tvBusinessName.setVisibility(View.GONE);
+		}
 
+
+		
+		
+		
 		if (!TextUtils.isEmpty(trac.getGoal()))
 			holder.tvGoal.setText(trac.getGoal());
+		
+		
+		
+		 
 
 		if (!TextUtils.isEmpty(trac.getGroupName())) {
 			holder.tvGroupName.setVisibility(View.VISIBLE);
 			holder.tvGroupName.setText(trac.getGroupName());
 			if (groupPosition == 2) {
 				holder.tvGroupName.append(" - " + trac.getOwnerName());
+				holder.tvGroupName.setVisibility(View.VISIBLE);
 			}
 		} else {
 			if (groupPosition == 2) {
+				
+				if(TextUtils.isEmpty(trac.getBusiness_name()))
+				{
 				holder.tvGroupName.setText(trac.getOwnerName());
+				holder.tvGroupName.setVisibility(View.VISIBLE);
+				}
+				else
+				{
+					holder.tvGroupName.setVisibility(View.GONE);
+				}
 			} else {
 				holder.tvGroupName.setVisibility(View.GONE);
 			}
 		}
 
+		
+		
+		holder.llClick.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+				if(trac.getWebsite_link().trim().length()>0)
+				{
+					 Intent intent = new Intent(mContext, PrivacyPolicy.class);
+					 intent.putExtra("link", trac.getWebsite_link());
+					 intent.putExtra("header", "Website");
+					 mContext.startActivity(intent);
+				}
+				
+			}
+		});
 		/*
 		 * if (!TextUtils.isEmpty(trac.getGroupName()) &&
 		 * !TextUtils.isEmpty(trac.getGroupType())) { holder.tvGroupName.append(

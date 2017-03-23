@@ -13,17 +13,20 @@ public class CustomButton extends Button {
 
 	public CustomButton(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
+		 if (!isInEditMode())
 		init(attrs);
 	}
 	
 	public CustomButton(Context context, AttributeSet attrs) {
 		super(context, attrs);
+		 if (!isInEditMode())
 		init(attrs);
 		
 	}
 	
 	public CustomButton(Context context) {
 		super(context);
+		 if (!isInEditMode())
 		init(null);
 	}
 	

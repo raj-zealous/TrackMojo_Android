@@ -29,12 +29,28 @@ public class Trac implements Serializable {
     private String requestStatus;
     private boolean isManageTracVisible;
     private String ownerName;
-
+    private String business_name;
+    private String website_link;
+    
     public Trac() {
 
     }
+    
+    
 
-    public void setId(int id) {
+    public String getWebsite_link() {
+		return website_link;
+	}
+
+
+
+	public void setWebsite_link(String website_link) {
+		this.website_link = website_link;
+	}
+
+
+
+	public void setId(int id) {
         this.id = id;
     }
 
@@ -161,5 +177,15 @@ public class Trac implements Serializable {
     public void setOwnerName(String ownerName) {
         this.ownerName = ownerName;
     }
+
+	public String getBusiness_name() {
+		return business_name;
+	}
+
+	public void setBusiness_name(String business_name) {
+		this.business_name = business_name;
+	}
+    
+    
 }
 

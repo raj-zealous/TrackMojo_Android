@@ -56,8 +56,18 @@ public class PrivacyPolicy extends BaseActivity {
         Bundle bundle = getIntent().getExtras();
         if (bundle!=null) {
             if(bundle.containsKey("link")) {
+            	
                 String  link = bundle.getString("link");
-                tvHeader.setText(getString(R.string.txt_terms));
+                
+                if(bundle.containsKey("header")) {
+                	 String  header = bundle.getString("header");
+                	 tvHeader.setText(header);
+                }
+                else
+                {
+                	 tvHeader.setText(getString(R.string.txt_terms));
+                }
+             
                 if(Util.checkConnection(mContext)){
                 progressBar1.setVisibility(View.VISIBLE);
                 wbPrivacyPolicy.loadUrl(link);

@@ -68,6 +68,7 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.listener.OnChartGestureListener;
 import com.tracmojo.R;
+import com.tracmojo.customwidget.CustomTextView;
 import com.tracmojo.database.RemDBAdapter;
 import com.tracmojo.model.GraphModel;
 import com.tracmojo.ui.BaseActivity;
@@ -110,9 +111,9 @@ public class FollowerTracReviewFragment extends BaseFragment implements OnClickL
 
     private int mYear,mMonth,mDay;
     private String dob="";
-    private String frequency="";
+    private String frequency="",business_name="";
 
-
+    CustomTextView txt_business_name;
     RemDBAdapter remDBAdapter;
 
 
@@ -292,6 +293,7 @@ public class FollowerTracReviewFragment extends BaseFragment implements OnClickL
         relCaptureGraph = (LinearLayout) llLayout.findViewById(R.id.fragment_trac_review_relCaptureGraph);
 
         tvTracName = (TextView) llLayout.findViewById(R.id.fragment_trac_review_tvTracName);
+        txt_business_name = (CustomTextView) llLayout.findViewById(R.id.row_home_list_item_business_name);
         tvTracFrequency = (TextView) llLayout.findViewById(R.id.fragment_trac_review_tvFrequency);
         tvPersonalFollowers = (TextView) llLayout.findViewById(R.id.fragment_trac_review_tvOwnerName);
         tvStartedDate = (TextView) llLayout.findViewById(R.id.fragment_trac_review_tvStartedDate);
@@ -501,6 +503,20 @@ public class FollowerTracReviewFragment extends BaseFragment implements OnClickL
                 String ideaName = "" + jsonTrac.getString("idea_id_name");
                 tvTracName.setText(ideaName);
             }
+            
+            
+            business_name= "" + jsonTrac.getString("business_name");
+            if(!TextUtils.isEmpty(business_name)){
+            	txt_business_name.setText(business_name);
+            	txt_business_name.setVisibility(View.VISIBLE);
+            }
+            else
+            {
+            	txt_business_name.setVisibility(View.GONE);
+            }
+            
+            
+            
 
             frequency = "" + jsonTrac.getString("rating_frequency");
             tvTracFrequency.setText(frequency);
