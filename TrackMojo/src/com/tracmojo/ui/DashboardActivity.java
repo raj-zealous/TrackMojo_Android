@@ -498,6 +498,7 @@ public class DashboardActivity extends BaseActivity {
                     		
                     			String message = jsonObject.getString("message");
                     			Toast.makeText(mContext, message, Toast.LENGTH_SHORT).show();
+                    			edtInviteCode.setText("");
                     			rlHome.performClick();
                     			
                     			
@@ -667,6 +668,7 @@ public class DashboardActivity extends BaseActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				edtInviteCode.setText("");
 				dialog.dismiss();
 
 			}

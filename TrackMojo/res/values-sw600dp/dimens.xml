@@ -26,6 +26,7 @@
     <dimen name="eighteen">28dp</dimen>
     <dimen name="tendp">20dp</dimen>
     <dimen name="twelve_dp">24dp</dimen>
+      <dimen name="fourteen">25dp</dimen>
     <dimen name="fifteen">27dp</dimen>
     <dimen name="twenty">40dp</dimen>
     <dimen name="border">2dp</dimen>

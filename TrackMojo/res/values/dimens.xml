@@ -16,6 +16,7 @@
     <dimen name="btmpading">7dp</dimen>
     <dimen name="tendp">10dp</dimen>
     <dimen name="twelve_dp">12dp</dimen>
+      <dimen name="fourteen">14dp</dimen>
     <dimen name="fifteen">15dp</dimen>
     <dimen name="eighteen">18dp</dimen>
     <dimen name="twenty">20dp</dimen>

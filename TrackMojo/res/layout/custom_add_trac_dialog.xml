@@ -43,16 +43,34 @@
             android:textSize="@dimen/font_small"
             app:fontName="Roboto-Regular.ttf" />
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/tmp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/lblInviteCode"
+            android:gravity="center"
+            android:orientation="horizontal"
             android:layout_marginBottom="@dimen/twenty"
-            android:layout_marginLeft="@dimen/thirtyfive_dp"
-            android:layout_marginRight="@dimen/thirtyfive_dp"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:layout_marginRight="@dimen/fifteen"
             android:layout_marginTop="@dimen/twenty" >
 
+            
+            <com.tracmojo.customwidget.CustomEditText
+                android:id="@+id/edtInviteCode"
+                android:layout_width="@dimen/onefifty"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/twelve_dp"
+                android:layout_toLeftOf="@+id/btnGo"
+                android:background="@drawable/edit_box_background2"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/twelve_dp"
+                android:singleLine="true"
+                android:textColor="@color/regular_text"
+                android:textSize="@dimen/font_small"
+                app:fontNameForEditText="Roboto-Regular.ttf" />
+            
             <com.tracmojo.customwidget.CustomButton
                 android:id="@+id/btnGo"
                 android:layout_width="wrap_content"
@@ -65,22 +83,8 @@
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/font_medium"
                 app:fontNameForButton="Roboto-Regular.ttf" />
-
-            <com.tracmojo.customwidget.CustomEditText
-                android:id="@+id/edtInviteCode"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="@dimen/twelve_dp"
-                android:layout_toLeftOf="@+id/btnGo"
-                android:background="@drawable/edit_box_background2"
-                android:inputType="textEmailAddress"
-                android:padding="@dimen/tendp"
-                android:singleLine="true"
-                android:textColor="@color/regular_text"
-                android:textSize="@dimen/font_small"
-                app:fontNameForEditText="Roboto-Regular.ttf" />
-        </RelativeLayout>
+            
+        </LinearLayout>
 
         <com.tracmojo.customwidget.CustomTextView
             android:layout_width="wrap_content"
