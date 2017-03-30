@@ -471,6 +471,7 @@ public class DashboardActivity extends BaseActivity {
                     }
                 } catch (JSONException e) {
                     // TODO Auto-generated catch block
+                	edtInviteCode.setText("");
                     e.printStackTrace();
                 }
             }
@@ -543,6 +544,7 @@ public class DashboardActivity extends BaseActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e("Json Error", "==> " + error.getMessage());
+                edtInviteCode.setText("");
                 stopProgress();
                 Util.showMessage(mContext, error.getMessage());
             }
