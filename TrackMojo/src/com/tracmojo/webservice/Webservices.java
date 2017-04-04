@@ -6,8 +6,15 @@ public class Webservices {
  
 	//	private static String SERVER_BASE_URL="http://app.tracmojo.com/backend/web/api/user/";
 	//private static String SERVER_BASE_URL="http://54.153.145.178/backend/web/api/user/";
-    private static String SERVER_BASE_URL="http://opensource.zealousys.com/backend/web/api/user/";
+    
+//		/*local url */
+//	private static String SERVER_BASE_URL="http://opensource.zealousys.com/backend/web/api/user/";
+//     
+	
+	/*live url */
+	private static String SERVER_BASE_URL="http://54.153.145.178/backend_new/web/api/user/";
      
+	 
 	 
 	//api links
 	public static String LOGIN = SERVER_BASE_URL +  "login";
